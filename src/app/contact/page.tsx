@@ -12,12 +12,12 @@ const contactInfo = [
   },
   {
     icon: 'https://ext.same-assets.com/3716856803/15865303.svg',
-    title: '123-456-7890',
+    title: '404-820-7894',
     description: 'Phone',
   },
   {
     icon: 'https://ext.same-assets.com/3716856803/3067542398.svg',
-    title: 'jwilson@email.com',
+    title: 'richietran11@email.com',
     description: 'Email',
   },
   {
@@ -104,7 +104,7 @@ export default function Contact() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="mailto:jwilson@email.com"
+                  href="mailto:richietran11@email.com"
                   className="px-8 py-3 bg-resumify-pink text-white rounded-full hover:bg-resumify-pink/90 transition-colors font-medium"
                 >
                   Send Email

@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
-const roles = ['Web Designer', 'Web Developer', 'Graphic Designer', 'Content Manager'];
+const roles = ['Data Analyst', 'Business Analyst', 'Database Engineer', 'AI Engineer'];
 
 export default function Home() {
   const [currentRole, setCurrentRole] = useState(0);
@@ -35,7 +35,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              John <span className="text-resumify-pink">Wilson</span>
+              Richie <span className="text-resumify-black">Tran</span>
             </motion.h1>
 
             <div className="text-2xl lg:text-3xl text-resumify-gray mb-8">

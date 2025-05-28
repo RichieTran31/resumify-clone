@@ -3,7 +3,7 @@ import "./globals.css";
 import ClientBody from "./ClientBody";
 
 export const metadata: Metadata = {
-  title: "Resumify - John Wilson Portfolio",
+  title: "Resumify - Richie Tran Portfolio",
   description: "Elevate your online presence with Resumify's dynamic template. Craft a standout CV and portfolio effortlessly, reflecting your unique skills.",
 };
 

@@ -29,28 +29,28 @@ const testimonials = [
     company: 'XYZ Company',
     image: 'https://ext.same-assets.com/2705408383/329400.jpeg',
     rating: 5,
-    text: 'John transformed our vision into a visual masterpiece. His creativity and attention to detail are unmatched. We couldn\'t be happier with the results.',
+    text: 'Richie transformed our vision into a visual masterpiece. His creativity and attention to detail are unmatched. We couldn\'t be happier with the results.',
   },
   {
     name: 'Sarah Brown',
     company: 'PQP Inc.',
     image: 'https://ext.same-assets.com/2705408383/3266291688.jpeg',
     rating: 5,
-    text: 'John exceeded our expectations in every way. His designs not only look great but also align perfectly with our brand values. A true professional.',
+    text: 'Richie exceeded our expectations in every way. His designs not only look great but also align perfectly with our brand values. A true professional.',
   },
   {
-    name: 'John Doe',
+    name: 'Richie Tran',
     company: 'ABC Corporation',
     image: 'https://ext.same-assets.com/2705408383/1719142224.jpeg',
     rating: 5,
-    text: 'John has a unique ability to understand the essence of a brand and translate it into visually compelling designs. Working with him was a pleasure.',
+    text: 'Richie has a unique ability to understand the essence of a brand and translate it into visually compelling designs. Working with him was a pleasure.',
   },
   {
     name: 'Mark Johnson',
     company: 'LMN Enterprises',
     image: 'https://ext.same-assets.com/2705408383/4186157281.jpeg',
     rating: 5,
-    text: 'John brought our ideas to life with a creative flair that sets him apart. His work has had a significant impact on our brand\'s image and market presence.',
+    text: 'Richie brought our ideas to life with a creative flair that sets him apart. His work has had a significant impact on our brand\'s image and market presence.',
   },
 ];
 
