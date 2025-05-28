@@ -6,22 +6,23 @@ import { motion } from 'framer-motion';
 
 const services = [
   {
-    title: 'Web Design',
-    description: 'I craft digital experiences that not only captivate but also engage your audience. From intuitive user interfaces to responsive layouts, my designs seamlessly blend form and function.',
+    title: 'Data-Driven Problem Solving',
+    description: 'I uncover insights that drive action. Whether through analytics, visualization, or automation, I transform complexity into clarity — enabling smarter decisions for startups and enterprises alike.',
   },
   {
-    title: 'Graphic Design',
-    description: 'Graphics are the language of visual communication, and I am fluent in creating designs that speak volumes. From eye-catching logos to compelling marketing collateral, each project is a canvas for storytelling.',
+    title: 'AI & Emerging Technology Integration',
+    description: 'I bridge the gap between business needs and cutting-edge tools. With modern AI assistants, agents, and developer frameworks, I’ve implemented scalable AI solutions that streamline operations and boost team productivity.',
   },
   {
-    title: 'SEO',
-    description: 'Beyond the visual realm, I understand the importance of visibility. My expertise in SEO ensures that your digital presence not only looks good but also performs exceptionally.',
+    title: 'Database & Backend Fluency',
+    description: 'With hands-on experience in SQL, data modeling, and relational database systems like SQL Server Management Studio and DBeaver, I design data pipelines and query logic that ensure reliable reporting, clean integrations, and business-ready insights.',
   },
   {
-    title: 'Branding',
-    description: 'Your brand is your identity, and I am here to make it unforgettable. Through meticulous branding strategies, I help businesses carve out a distinctive space in their industries.',
+    title: 'Leadership & Knowledge Sharing',
+    description: 'Whether mentoring peers, leading workshops, or coordinating with engineers and business teams, I create clarity, foster growth, and drive results across collaborative environments including startups and enterprise companies.',
   },
 ];
+
 
 const testimonials = [
   {
@@ -96,20 +97,20 @@ export default function AboutMe() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <div>
-            <h3 className="text-resumify-pink font-semibold mb-2">Age</h3>
-            <p className="text-resumify-gray">28</p>
+            <h3 className="text-resumify-pink font-semibold mb-2">Citizenship</h3>
+            <p className="text-resumify-gray">US</p>
           </div>
           <div>
             <h3 className="text-resumify-pink font-semibold mb-2">Location</h3>
-            <p className="text-resumify-gray">Los Angeles, USA</p>
+            <p className="text-resumify-gray">Atlanta, USA</p>
           </div>
           <div>
             <h3 className="text-resumify-pink font-semibold mb-2">Email</h3>
-            <p className="text-resumify-gray">jwilson@email.com</p>
+            <p className="text-resumify-gray">richietran11@email.com</p>
           </div>
           <div>
             <h3 className="text-resumify-pink font-semibold mb-2">Phone</h3>
-            <p className="text-resumify-gray">+0123 123 456 789</p>
+            <p className="text-resumify-gray">+1 404 820 7894</p>
           </div>
         </motion.div>
 
