@@ -24,15 +24,15 @@ export default function MobileNav() {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Image
-              src="https://ext.same-assets.com/627721302/178899629.jpeg"
-              alt="John Wilson"
+              src="https://media.licdn.com/dms/image/v2/D5603AQGZO6T5x3tsug/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1694300338754?e=1762992000&v=beta&t=RSDlbYCScO_Qop5U4j99vWh5N-9YaLri_1wCHnVPlfw"
+              alt="Richie Tran"
               width={40}
               height={40}
               className="w-10 h-10 rounded-full border-2 border-white object-cover"
             />
             <div>
-              <h1 className="font-semibold">John Wilson</h1>
-              <p className="text-sm text-white/80">Web Designer</p>
+              <h1 className="font-semibold">Richie Tran</h1>
+              <p className="text-sm text-white/80">Data Analyst</p>
             </div>
           </div>
           <button

@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
-const roles = ['Data Analyst', 'Business Analyst', 'Database Engineer', 'AI Engineer'];
+const roles = ['Individual Contributor', 'Self Starter', 'Data Expert', 'First Generation Graduate'];
 
 export default function Home() {
   const [currentRole, setCurrentRole] = useState(0);

@@ -6,45 +6,45 @@ import { motion } from 'framer-motion';
 
 const services = [
   {
-    title: 'Data-Driven Problem Solving',
-    description: 'I uncover insights that drive action. Whether through analytics, visualization, or automation, I transform complexity into clarity — enabling smarter decisions for startups and enterprises alike.',
+    title: 'Stakeholder Communication & Project Discovery',
+    description: 'Strong communicator who deeply understands requirements, context -> Aligned deliverables with consistently happy stakeholders',
   },
   {
     title: 'AI & Emerging Technology Integration',
-    description: 'I bridge the gap between business needs and cutting-edge tools. With modern AI assistants, agents, and developer frameworks, I’ve implemented scalable AI solutions that streamline operations and boost team productivity.',
+    description: 'Experience in agents and dozens of LLMs -> Scalable AI solutions that boost productivity and provides higher quality solutions.',
   },
   {
     title: 'Database & Backend Fluency',
-    description: 'With hands-on experience in SQL, data modeling, and relational database systems like SQL Server Management Studio and DBeaver, I design data pipelines and query logic that ensure reliable reporting, clean integrations, and business-ready insights.',
+    description: 'Hands on experience in SQL and SQL tools -> Excellent data pipelines design and query logic for reliable reporting, clean integrations, and business-ready insights.',
   },
   {
     title: 'Leadership & Knowledge Sharing',
-    description: 'Whether mentoring peers, leading workshops, or coordinating with engineers and business teams, I create clarity, foster growth, and drive results across collaborative environments including startups and enterprise companies.',
+    description: 'Innate desire and joy in teaching others -> Mentored 15+ coworkers, managers, and students in SQL & BI Tools (Tableau and PowerBI).',
   },
 ];
 
 
 const testimonials = [
   {
-    name: 'Jane Smith',
-    company: 'XYZ Company',
+    name: 'Kabeer Alabi',
+    company: 'Software Engineer',
     image: 'https://ext.same-assets.com/2705408383/329400.jpeg',
     rating: 5,
-    text: 'Richie transformed our vision into a visual masterpiece. His creativity and attention to detail are unmatched. We couldn\'t be happier with the results.',
+    text: 'Richie has always stood out from his peers. He provides .',
   },
   {
-    name: 'Sarah Brown',
-    company: 'PQP Inc.',
+    name: 'Hossam',
+    company: 'CEO @ Floaty AI',
     image: 'https://ext.same-assets.com/2705408383/3266291688.jpeg',
     rating: 5,
-    text: 'Richie exceeded our expectations in every way. His designs not only look great but also align perfectly with our brand values. A true professional.',
+    text: 'Richie consistently brings fresh ideas, shows accountability, and keeps our product roadmap on track. I trust him to provide clear direction, timely results, and confident decision-making as our product manager.',
   },
   {
-    name: 'Richie Tran',
-    company: 'ABC Corporation',
+    name: 'Zhaohu (Johnathan) Phan',
+    company: 'Business Analytics Graduate Professor @ Georgia Tech ',
     image: 'https://ext.same-assets.com/2705408383/1719142224.jpeg',
     rating: 5,
-    text: 'Richie has a unique ability to understand the essence of a brand and translate it into visually compelling designs. Working with him was a pleasure.',
+    text: 'During a Fortune 500 project, he developed a sustainable analytics dashboard that demonstrated both technical skill and strategic insight. His clear communication, innovative problem-solving, and strong contributions in corporate meetings and presentations set him apart as a driven and effective analyst lead.',
   },
   {
     name: 'Mark Johnson',
@@ -64,7 +64,7 @@ const brands = [
 ];
 
 const stats = [
-  { label: 'Happy Clients', value: '+1K' },
+  { label: 'Unique Reports', value: '' },
   { label: 'Working Hours', value: '+5K' },
   { label: 'Projects', value: '+200' },
 ];
@@ -83,9 +83,10 @@ export default function AboutMe() {
             About <span className="text-resumify-pink">Me</span>
           </h1>
           <p className="text-lg text-resumify-gray leading-relaxed max-w-4xl">
-            I'm a passionate graphic and web designer with a mission to transform ideas into visually stunning realities.
-            With a keen eye for detail and a commitment to delivering unparalleled design solutions, I bring creativity
-            and functionality together to elevate your brand.
+            
+            I lead projects and development for enteprise and department level reporting.
+            From project planning to OKRs to forecasting, my goal is to both bring valuable information but present it in the most easy to use way for leadership.
+            I pair my technical strengths in reporting, data modeling, and tech stack with project management skills including stakeholder manaagement and road mapping to bring high level, high impact, and timely reports.
           </p>
         </motion.div>
 

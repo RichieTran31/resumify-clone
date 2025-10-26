@@ -65,13 +65,13 @@ const softSkills = [
 
 const certifications = [
   {
-    title: 'Web Design',
+    title: 'Business Analytics Certification',
     subtitle: 'Responsive Design',
     date: '19 April 2020',
     image: 'https://ext.same-assets.com/455434306/2245594702.jpeg',
   },
   {
-    title: 'Graphic Design',
+    title: 'Workato Automation',
     subtitle: 'Color theory and fundamentals',
     date: '20 August 2021',
     image: 'https://ext.same-assets.com/455434306/1948768588.jpeg',
