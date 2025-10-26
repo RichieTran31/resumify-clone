@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 const services = [
   {
     title: 'Stakeholder Communication & Project Discovery',
-    description: 'Strong communicator who deeply understands requirements, context -> Aligned deliverables with consistently happy stakeholders',
+    description: 'Strong communicator who deeply understands how to gather requirements and pull the right people -> Aligned deliverables with consistently happy stakeholders',
   },
   {
     title: 'AI & Emerging Technology Integration',
@@ -28,16 +28,16 @@ const testimonials = [
   {
     name: 'Kabeer Alabi',
     company: 'Software Engineer',
-    image: 'https://ext.same-assets.com/2705408383/329400.jpeg',
+    image: '\Kabeer Alabi.png',
     rating: 5,
-    text: 'Richie has always stood out from his peers. He provides .',
+    text: 'Richie has always stood out from his peers. He.',
   },
   {
     name: 'Hossam',
     company: 'CEO @ Floaty AI',
-    image: 'https://ext.same-assets.com/2705408383/3266291688.jpeg',
+    image: 'src\public\Richie Tran.jpg',
     rating: 5,
-    text: 'Richie consistently brings fresh ideas, shows accountability, and keeps our product roadmap on track. I trust him to provide clear direction, timely results, and confident decision-making as our product manager.',
+    text: 'Richie consistently brings fresh ideas, shows accountability, and keeps our product roadmap on track. I trust him to provide clear direction, timely results, and confident decision making as our product manager.',
   },
   {
     name: 'Zhaohu (Johnathan) Phan',
@@ -64,7 +64,7 @@ const brands = [
 ];
 
 const stats = [
-  { label: 'Unique Reports', value: '' },
+  { label: 'Developed Reports', value: '+20' },
   { label: 'Working Hours', value: '+5K' },
   { label: 'Projects', value: '+200' },
 ];
@@ -83,11 +83,10 @@ export default function AboutMe() {
             About <span className="text-resumify-pink">Me</span>
           </h1>
           <p className="text-lg text-resumify-gray leading-relaxed max-w-4xl">
-            
-            I lead projects and development for enteprise and department level reporting.
-            From project planning to OKRs to forecasting, my goal is to both bring valuable information but present it in the most easy to use way for leadership.
-            I pair my technical strengths in reporting, data modeling, and tech stack with project management skills including stakeholder manaagement and road mapping to bring high level, high impact, and timely reports.
-          </p>
+            Richie Tran leads enterprise and department-level reporting initiatives, combining technical precision with strategic project management.
+            From planning and OKRs to forecasting, his focus is on delivering insights that are not only valuable but also intuitive for leadership to act on.
+            By blending expertise in reporting, data modeling, and modern analytics tools with strong stakeholder management and roadmap execution, Richie consistently drives high-impact, on-time reporting solutions that enhance decision-making across the organization.
+        </p>
         </motion.div>
 
         {/* Contact Info */}
@@ -122,7 +121,7 @@ export default function AboutMe() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <h2 className="text-3xl font-bold text-resumify-dark mb-8">
-            My <span className="text-resumify-pink">Work</span>
+            My <span className="text-resumify-pink">Strengths</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
@@ -134,13 +133,13 @@ export default function AboutMe() {
           </div>
         </motion.div>
 
-        {/* Happy Clients */}
+        {/* Recommendations */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <h2 className="text-3xl font-bold text-resumify-dark mb-8">Happy Clients</h2>
+          <h2 className="text-3xl font-bold text-resumify-dark mb-8">Recommendations</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={testimonial.name} className="bg-white rounded-lg p-6 shadow-md">
