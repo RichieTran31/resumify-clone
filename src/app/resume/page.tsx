@@ -6,74 +6,89 @@ import { motion } from 'framer-motion';
 
 const experience = [
   {
-    period: '2012 - Current',
-    company: 'Google',
-    title: 'Senior UI Designer',
-    description: 'Strategic Senior UI Designer blending aesthetics and functionality to elevate user experiences.',
+    period: 'Current',
+    company: 'FIS',
+    title: 'Data Analyst',
+    description: 'Data Analyst in the CTO Strategic Planning Office delivering enterprise-level reporting and supporting data-backed decisions',
   },
   {
-    period: '2010 - 2012',
-    company: 'Meta',
-    title: 'Junior UI Designer',
-    description: 'Enthusiastic Junior UI Designer, blending creativity with a strong foundation in design principles to contribute fresh ideas to collaborative projects.',
+    period: '2022 - 2024',
+    company: 'Various', 
+    title: 'General Analyst - Individual Contributor',
+    description: '4 internships + part time roles in IT, Consulting, and Finance to learn more about different industries',
   },
 ];
 
 const education = [
   {
-    year: '2009',
-    institution: 'University',
-    degree: 'Web Design',
-    description: 'Mastering user experience and responsive design for visually appealing and functional websites.',
+    year: '2026',
+    institution: 'Georgia Institute of Technology',
+    degree: 'Master of Analytics',
+    description: 'Current part-time master student focusing on Statistics & Business Analytics',
   },
   {
-    year: '2008',
-    institution: 'Meta',
-    degree: 'Graphic Design',
-    description: 'Skilled in visual communication, typography, and multimedia design to craft compelling visual narratives.',
+    year: '2024',
+    institution: 'Georgia Institute of Technology',
+    degree: 'Bachelor of Science in Business Administration',
+    description: 'Concentration in IT management & Business Analytics, graduating with highest honors',
   },
 ];
 
-const designSkills = [
-  { name: 'Web Design', level: 95 },
-  { name: 'Branding', level: 70 },
-  { name: 'Logo Design', level: 90 },
-  { name: 'Graphic Design', level: 80 },
+
+const Extracurriculars = [
+  {
+    year: '2010 - Current',
+    institution: 'TNTT Lê Bảo Tịnh - ATL ', // change to organization
+    degree: 'Youth Leader', // change to position
+    description: 'Church education and serving the Vietnamese Catholic community in the north and south metro Atlanta region',
+  },
+  {
+    year: '2018 - 2019',
+    institution: 'Various', // change to organization
+    degree: 'Volunteer Educator', // change to position
+    description: 'Various volunteering opportunities focused on educating underserved communities with organizations including The Young People\'s Project, Georgia State Academy for Future Teachers, and Walking in Authority Council.',
+  },
 ];
 
-const codingSkills = [
-  { name: 'HTML', level: 100 },
-  { name: 'JavaScript', level: 80 },
-  { name: 'CSS', level: 95 },
-  { name: 'React.js', level: 65 },
+const technologySkills = [
+  { name: 'BI Tools - PowerBI, Tableau', level: 95 },
+  { name: 'SQL - SSMS, Fabric', level: 75 },
+  { name: 'Languages - Python, JavaScript, HTML/CSS', level: 85 },
+  { name: 'Integration Platforms - Power Automate, Altreyx, SSIS', level: 75 },
+];
+
+const businessSkills = [
+  { name: 'Excel', level: 100 },
+  { name: 'Project Management - Jira, Trello, Smartsheet', level: 85 },
+  { name: 'Statistics', level: 80 },
+  { name: 'Financial Modeling', level: 75 },
+  { name: 'Process Optimization', level: 85 },
 ];
 
 const softSkills = [
   'Communication',
-  'Time Management',
   'Leadership',
-  'Empathy',
-  'Listening',
-  'Problem-solving',
-  'Teamwork',
-  'Organization',
-  'Conflict Management',
-  'Creativity',
-  'Persuasion',
-  'Critical Thinking',
+  'Emotional Intelligence',
+  'Strategic Thinking',
+  'Problem Solving',
+  'Team Collaboration',
+  'Accountability',
+  'Adaptability',
+  'Decision Making',
+  'Mentorship & Coaching',
 ];
 
 const certifications = [
   {
-    title: 'Business Analytics Certification',
-    subtitle: 'Responsive Design',
-    date: '19 April 2020',
+    title: 'Zell Miller Scholarship',
+    subtitle: 'Full Tuition Scholarship to the #1 School in the State of Georgia',
+    date: 'December 2024',
     image: 'https://ext.same-assets.com/455434306/2245594702.jpeg',
   },
   {
-    title: 'Workato Automation',
-    subtitle: 'Color theory and fundamentals',
-    date: '20 August 2021',
+    title: 'Valedictorian',
+    subtitle: 'GPA Rank 1 out of 300+ Seniors (4.5)',
+    date: 'May 2021',
     image: 'https://ext.same-assets.com/455434306/1948768588.jpeg',
   },
 ];
@@ -156,28 +171,23 @@ export default function Resume() {
                 ))}
               </div>
             </motion.div>
-
-            {/* Certifications */}
+            
+            {/* Extracurriculars */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <h2 className="text-3xl font-bold text-resumify-dark mb-8">Certifications</h2>
-              <div className="space-y-6">
-                {certifications.map((cert, index) => (
-                  <div key={`cert-${cert.title}-${cert.date}`} className="flex gap-4 bg-white p-4 rounded-lg shadow-md">
-                    <Image
-                      src={cert.image}
-                      alt={cert.title}
-                      width={80}
-                      height={60}
-                      className="w-20 h-15 object-cover rounded"
-                    />
-                    <div className="flex-1">
-                      <h3 className="font-semibold text-resumify-dark">{cert.title}</h3>
-                      <p className="text-resumify-gray text-sm">{cert.subtitle}</p>
-                      <p className="text-resumify-gray text-sm">{cert.date}</p>
+              <h2 className="text-3xl font-bold text-resumify-dark mb-8">Extracurriculars</h2>
+              <div className="space-y-8">
+                {Extracurriculars.map((edu, index) => (
+                  <div key={`edu-${edu.institution}-${edu.year}`} className="relative pl-8 border-l-2 border-resumify-pink">
+                    <div className="absolute -left-2 top-0 w-4 h-4 bg-resumify-pink rounded-full" />
+                    <div className="space-y-2">
+                      <div className="text-sm text-resumify-gray">{edu.year}</div>
+                      <div className="text-sm text-resumify-gray">{edu.institution}</div>
+                      <h3 className="text-xl font-semibold text-resumify-dark">{edu.degree}</h3>
+                      <p className="text-resumify-gray">{edu.description}</p>
                     </div>
                   </div>
                 ))}
@@ -194,10 +204,10 @@ export default function Resume() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <h2 className="text-3xl font-bold text-resumify-dark mb-8">
-                Design <span className="text-resumify-pink">Skills</span>
+                Technology <span className="text-resumify-pink">Skills</span>
               </h2>
               <div className="space-y-6">
-                {designSkills.map((skill) => (
+                {technologySkills.map((skill) => (
                   <ProgressBar key={skill.name} skill={skill} />
                 ))}
               </div>
@@ -210,10 +220,10 @@ export default function Resume() {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <h2 className="text-3xl font-bold text-resumify-dark mb-8">
-                Coding <span className="text-resumify-pink">Skills</span>
+                Business <span className="text-resumify-pink">Skills</span>
               </h2>
               <div className="space-y-6">
-                {codingSkills.map((skill) => (
+                {businessSkills.map((skill) => (
                   <ProgressBar key={skill.name} skill={skill} />
                 ))}
               </div>
@@ -236,6 +246,32 @@ export default function Resume() {
                   >
                     {skill}
                   </span>
+                ))}
+              </div>
+            </motion.div>
+            {/* Accolades */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+            >
+              <h2 className="text-3xl font-bold text-resumify-dark mb-8">Accolades</h2>
+              <div className="space-y-6">
+                {certifications.map((cert, index) => (
+                <div key={`cert-${cert.title}-${cert.date}`} className="flex gap-3 bg-white p-3 rounded-md shadow-sm">
+                  <Image
+                    src={cert.image}
+                    alt={cert.title}
+                    width={32}
+                    height={24}
+                    className="w-12 h-10 object-contain rounded"
+                  />
+                  <div className="flex-1 text-sm">
+                    <h3 className="font-semibold text-resumify-dark">{cert.title}</h3>
+                    <p className="text-resumify-gray text-xs">{cert.subtitle}</p>
+                    <p className="text-resumify-gray text-xs">{cert.date}</p>
+                  </div>
+                </div>
                 ))}
               </div>
             </motion.div>

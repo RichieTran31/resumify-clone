@@ -6,16 +6,16 @@ import { motion } from 'framer-motion';
 
 const services = [
   {
-    title: 'Stakeholder Communication & Project Discovery',
-    description: 'Strong communicator who deeply understands how to gather requirements and pull the right people -> Aligned deliverables with consistently happy stakeholders',
+    title: 'Communication & Roadmapping',
+    description: 'Clear communicator skilled at gathering requirements and aligning the right teams → Consistently delivering projects that exceed stakeholder expectations.',
   },
   {
     title: 'AI & Emerging Technology Integration',
     description: 'Experience in agents and dozens of LLMs -> Scalable AI solutions that boost productivity and provides higher quality solutions.',
   },
   {
-    title: 'Database & Backend Fluency',
-    description: 'Hands on experience in SQL and SQL tools -> Excellent data pipelines design and query logic for reliable reporting, clean integrations, and business-ready insights.',
+    title: 'Technical Fluency',
+    description: 'Hands on experience in SQL, ETL, and BI tools -> Excellent data pipelines design and query logic for reliable reporting and business-ready insights.',
   },
   {
     title: 'Leadership & Knowledge Sharing',
@@ -26,47 +26,50 @@ const services = [
 
 const testimonials = [
   {
-    name: 'Kabeer Alabi',
-    company: 'Software Engineer',
-    image: '\Kabeer Alabi.png',
-    rating: 5,
-    text: 'Richie has always stood out from his peers. He.',
-  },
-  {
-    name: 'Hossam',
-    company: 'CEO @ Floaty AI',
-    image: 'src\public\Richie Tran.jpg',
-    rating: 5,
-    text: 'Richie consistently brings fresh ideas, shows accountability, and keeps our product roadmap on track. I trust him to provide clear direction, timely results, and confident decision making as our product manager.',
-  },
-  {
-    name: 'Zhaohu (Johnathan) Phan',
-    company: 'Business Analytics Graduate Professor @ Georgia Tech ',
-    image: 'https://ext.same-assets.com/2705408383/1719142224.jpeg',
+    name: 'Zhaohu (Johnathan) Fan',
+    company: 'Business Analytics Graduate Professor @ Georgia Tech',
+    image: '\_Zhaohu Johnathan Fan.webp',
     rating: 5,
     text: 'During a Fortune 500 project, he developed a sustainable analytics dashboard that demonstrated both technical skill and strategic insight. His clear communication, innovative problem-solving, and strong contributions in corporate meetings and presentations set him apart as a driven and effective analyst lead.',
   },
   {
-    name: 'Mark Johnson',
-    company: 'LMN Enterprises',
-    image: 'https://ext.same-assets.com/2705408383/4186157281.jpeg',
+    name: 'Davis King',
+    company: 'Senior Analytics Consultant @ Analytic Vizion',
+    image: '\_Davis King.jpg',
     rating: 5,
-    text: 'Richie brought our ideas to life with a creative flair that sets him apart. His work has had a significant impact on our brand\'s image and market presence.',
+    text: 'As Richie’s mentor during a business analytics practicum with Home Depot leaders, I was impressed by his initiative and leadership. He drove the project forward, led stakeholder discussions, and challenged my analytical thinking as an MBA graduate.',
   },
+  {
+    name: 'Jim Holman',
+    company: 'Director of Technology Advisory Services @ Cherry Bekaert',
+    image: '\_Jim Holman.jpg',
+    rating: 5,
+    text: 'I saw that Richie brought a fresh perspective and positive attitude during each meeting he was in. He learns technical tools extremely quickly and is a consise communicator when facing problems and presenting solutions.',
+  },
+  {
+    name: 'Kabeer Alabi',
+    company: 'Software Engineer @ Floaty AI',
+    image: '\_Kabeer Alabi.png',
+    rating: 5,
+    text: 'Richie consistently brings new ideas, shows accountability, and keeps our product roadmap on track. His collaborative and optimistic attitude makes him a reliable and enjoyable teammate.',
+  }
 ];
 
 const brands = [
-  { name: 'Apple', image: 'https://ext.same-assets.com/2705408383/3678453440.png' },
-  { name: 'Google', image: 'https://ext.same-assets.com/2705408383/2869606868.png' },
-  { name: 'IBM', image: 'https://ext.same-assets.com/2705408383/1187235485.png' },
-  { name: 'Microsoft', image: 'https://ext.same-assets.com/2705408383/67518248.webp' },
-  { name: 'HP', image: 'https://ext.same-assets.com/2705408383/1674273462.png' },
+  { name: 'NCR', image: '/NCR.png' },
+  { name: 'The Home Depot', image: '/The Home Depot.svg' },
+  { name: 'FIS', image: '/FIS.png' },
+  { name: 'Koch Industries', image: '/Koch Industries.png' },
+  { name: 'Teradata', image: '/Teradata.png' },
+  { name: 'Cherry Bekaert', image: '/Cherry Bekaert.svg' },
 ];
 
 const stats = [
   { label: 'Developed Reports', value: '+20' },
-  { label: 'Working Hours', value: '+5K' },
-  { label: 'Projects', value: '+200' },
+  { label: 'Teaching Volunteer Hours', value: '+200' },
+  { label: 'First Cousins', value: '+30' },
+  { label: '', value: 'First Generation Graduate' },
+
 ];
 
 export default function AboutMe() {
@@ -195,12 +198,12 @@ export default function AboutMe() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
         >
-          <h2 className="text-3xl font-bold text-resumify-dark mb-8">Fun Facts</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <h2 className="text-3xl font-bold text-resumify-dark mb-8">Fun Facts</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-4xl font-bold text-resumify-pink mb-2">{stat.value}</div>
-                <div className="text-resumify-gray">{stat.label}</div>
+                <div className="text-3xl font-bold text-resumify-pink mb-1">{stat.value}</div>
+                <div className="text-md text-resumify-gray">{stat.label}</div>
               </div>
             ))}
           </div>
