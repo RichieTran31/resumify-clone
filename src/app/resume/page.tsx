@@ -43,7 +43,7 @@ const Extracurriculars = [
     description: 'Church education and serving the Vietnamese Catholic community in the north and south metro Atlanta region',
   },
   {
-    year: '2018 - 2019',
+    year: '2018 - 2020',
     institution: 'Various', // change to organization
     degree: 'Volunteer Educator', // change to position
     description: 'Various volunteering opportunities focused on educating underserved communities with organizations including The Young People\'s Project, Georgia State Academy for Future Teachers, and Walking in Authority Council.',
@@ -178,7 +178,7 @@ export default function Resume() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <h2 className="text-3xl font-bold text-resumify-dark mb-8">Extracurriculars</h2>
+              <h2 className="text-3xl font-bold text-resumify-dark mb-8">Volunteer</h2>
               <div className="space-y-8">
                 {Extracurriculars.map((edu, index) => (
                   <div key={`edu-${edu.institution}-${edu.year}`} className="relative pl-8 border-l-2 border-resumify-pink">

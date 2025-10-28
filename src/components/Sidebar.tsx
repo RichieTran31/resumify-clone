@@ -22,7 +22,10 @@ export default function Sidebar() {
       {/* Name and Title */}
       <div className="text-center mb-8">
         <h1 className="text-3xl font-semibold mb-2">Richie Tran</h1>
-        <p className="text-lg text-white/90">Data Analyst | First Generation Graduate | </p>
+        <p className="text-lg text-white/90">
+          Analytics & Tech<br />
+          First Generation Graduate
+        </p>
       </div>
 
       {/* Social Links */}
@@ -40,7 +43,7 @@ export default function Sidebar() {
 
       {/* Copyright */}
       <div className="absolute bottom-8 text-sm text-white/80">
-        © 2023 All rights reserved.
+        © 2025 All rights reserved.
       </div>
     </div>
   );

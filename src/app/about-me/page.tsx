@@ -67,9 +67,7 @@ const brands = [
 const stats = [
   { label: 'Developed Reports', value: '+20' },
   { label: 'Teaching Volunteer Hours', value: '+200' },
-  { label: 'First Cousins', value: '+30' },
-  { label: '', value: 'First Generation Graduate' },
-
+  { label: 'First Cousins', value: '+30' }
 ];
 
 export default function AboutMe() {
@@ -86,10 +84,9 @@ export default function AboutMe() {
             About <span className="text-resumify-pink">Me</span>
           </h1>
           <p className="text-lg text-resumify-gray leading-relaxed max-w-4xl">
-            Richie Tran leads enterprise and department-level reporting initiatives, combining technical precision with strategic project management.
-            From planning and OKRs to forecasting, his focus is on delivering insights that are not only valuable but also intuitive for leadership to act on.
-            By blending expertise in reporting, data modeling, and modern analytics tools with strong stakeholder management and roadmap execution, Richie consistently drives high-impact, on-time reporting solutions that enhance decision-making across the organization.
-        </p>
+          Richie Tran leads enterprise analytics initiatives, aligning data strategy with organizational goals. 
+          He bridges technical expertise and project leadership to deliver timely, high-value insights that shape executive decisions.  
+         </p>
         </motion.div>
 
         {/* Contact Info */}
@@ -199,11 +196,11 @@ export default function AboutMe() {
           transition={{ duration: 0.8, delay: 1.0 }}
         >
         <h2 className="text-3xl font-bold text-resumify-dark mb-8">Fun Facts</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-3xl font-bold text-resumify-pink mb-1">{stat.value}</div>
-                <div className="text-md text-resumify-gray">{stat.label}</div>
+                <div className="text-4xl font-bold text-resumify-pink mb-1">{stat.value}</div>
+                <div className="text-lg text-resumify-gray">{stat.label}</div>
               </div>
             ))}
           </div>
