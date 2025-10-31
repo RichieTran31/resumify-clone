@@ -83,13 +83,13 @@ const certifications = [
     title: 'Zell Miller Scholarship',
     subtitle: 'Full Tuition Scholarship to the #1 School in the State of Georgia',
     date: 'December 2024',
-    image: 'https://ext.same-assets.com/455434306/2245594702.jpeg',
+    image: '/Zell Miller.png',
   },
   {
     title: 'Valedictorian',
     subtitle: 'GPA Rank 1 out of 300+ Seniors (4.5)',
     date: 'May 2021',
-    image: 'https://ext.same-assets.com/455434306/1948768588.jpeg',
+    image: '/Valedictorian.jpg',
   },
 ];
 
