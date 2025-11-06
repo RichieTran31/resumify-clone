@@ -14,7 +14,7 @@ export default {
       },
       colors: {
         resumify: {
-          pink: '#f86b83',
+          pink: '#003268',
           dark: '#211917',
           light: '#faf8f9',
           gray: '#9a9694',

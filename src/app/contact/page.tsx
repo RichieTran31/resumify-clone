@@ -22,7 +22,7 @@ const contactInfo = [
   },
   {
     icon: 'https://ext.same-assets.com/3716856803/3881503158.svg',
-    title: 'Available for Work',
+    title: 'Open to Opportunities',
     description: 'Status',
   },
 ];
@@ -84,7 +84,7 @@ export default function Contact() {
             <div className="aspect-[16/9] bg-gradient-to-br from-blue-200 to-green-200 flex items-center justify-center">
               {/* Embedded Map */}
               <Image
-                src="https://ext.same-assets.com/3716856803/2043349370.png"
+                src="/location.png"
                 alt="Map showing location"
                 width={800}
                 height={450}
@@ -110,7 +110,7 @@ export default function Contact() {
                   Send Email
                 </a>
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+4048207894"
                   className="px-8 py-3 border-2 border-resumify-pink text-resumify-pink rounded-full hover:bg-resumify-pink hover:text-white transition-colors font-medium"
                 >
                   Call Now

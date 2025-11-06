@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
-const roles = ['Individual Contributor', 'Self Starter', 'Data Expert', 'First Generation Graduate'];
+const roles = ['Customer Obsessed', 'Outcome Focused', 'Ownership Driven', 'Narrative over Numbers'];
 
 export default function Home() {
   const [currentRole, setCurrentRole] = useState(0);
@@ -39,7 +39,7 @@ export default function Home() {
             </motion.h1>
 
             <div className="text-2xl lg:text-3xl text-resumify-gray mb-8">
-              <span>I'm a </span>
+              <span>I'm </span>
               <motion.span
                 key={currentRole}
                 className="text-resumify-pink font-semibold"
@@ -62,10 +62,10 @@ export default function Home() {
           >
             <div className="relative">
               <Image
-                src="https://ext.same-assets.com/627721302/2299584869.png"
+                src="/MultiTask.png"
                 alt="Graphic of a busy person multitasking"
-                width={500}
-                height={400}
+                width={600}
+                height={500}
                 className="w-full h-auto max-w-lg"
                 priority
               />
