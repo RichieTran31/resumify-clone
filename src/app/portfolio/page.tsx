@@ -35,8 +35,8 @@ const portfolioItems: PortfolioItem[] = [
     title: 'CTO OKR Report',
     category: 'Data Reporting',
     images: ['/AHA 2.png', '/AHA.png'],
-    context: 'Built interactive OKR tracking dashboards for the CTO organization.',
-    impact: ['Reduced manual updates by 60%', 'Aligned KPIs across 8 departments'],
+    context: '*** All Items Limited for Compliance ***, This Report helps the C-Suite and Board of Directors track the progression of the CTO OKRs and their alignment and progress towards the goals.',
+    impact: ['Reports, consisting of multiple pages and connect', 'Aligned KPIs across 8 departments'],
   },
   {
     id: '3',
@@ -59,6 +59,14 @@ const portfolioItems: PortfolioItem[] = [
     title: 'Floaty AI',
     category: 'AI',
     image: '/__FloatyAI.png',
+    context: 'Developed an AI platform integrating multiple LLM APIs for productivity tools.',
+    impact: ['Enabled dynamic model switching', 'Improved team efficiency 30%'],
+  },
+  {
+    id: '6',
+    title: 'Home Depot Analytics',
+    category: 'Analytics',
+    image: '/Tableau.png',
     context: 'Developed an AI platform integrating multiple LLM APIs for productivity tools.',
     impact: ['Enabled dynamic model switching', 'Improved team efficiency 30%'],
   },
@@ -249,7 +257,7 @@ function PreviewModal({ item, onClose }: { item: PortfolioItem; onClose: () => v
 
       {/* Card */}
       <motion.div
-        className="relative bg-white rounded-lg shadow-2xl overflow-hidden w-[100%] max-w-5xl h-[80vh] z-[101] flex flex-col"
+        className="relative bg-white rounded-lg shadow-2xl overflow-hidden w-[100%] max-w-[1075px] h-[80vh] z-[101] flex flex-col"
         initial={{ y: 28, scale: 0.96, opacity: 0 }}
         animate={{ y: 0, scale: 1, opacity: 1 }}
         transition={{ type: 'spring', stiffness: 180, damping: 18 }}
