@@ -20,7 +20,7 @@ export default function MobileNav() {
   return (
     <div className="lg:hidden">
       {/* Mobile Header */}
-      <div className="fixed top-0 left-0 right-0 bg-blue-600 text-white z-50 px-4 py-3">
+      <div className="fixed top-0 left-0 right-0 bg-resumify-pink text-white z-50 px-4 py-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Image

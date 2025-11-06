@@ -23,7 +23,7 @@ type PortfolioItem = {
 ============================== */
 const portfolioItems: PortfolioItem[] = [
   {
-    id: 'tech-innovators-hub',
+    id: '1',
     title: 'Christmas Sales Analysis',
     category: 'Data Reporting',
     images: ['/__Holiday_Dashboard_1.png', '/__Holiday_Dashboard_2.png'],
@@ -31,31 +31,31 @@ const portfolioItems: PortfolioItem[] = [
     impact: ['Improved forecast accuracy by 18%', 'Enabled better inventory allocation'],
   },
   {
-    id: 'urban-harvest-festival-poster',
+    id: '2',
     title: 'CTO OKR Report',
     category: 'Data Reporting',
-    image: 'https://ext.same-assets.com/477590935/3832520800.jpeg',
+    images: ['/AHA 2.png', '/AHA.png'],
     context: 'Built interactive OKR tracking dashboards for the CTO organization.',
     impact: ['Reduced manual updates by 60%', 'Aligned KPIs across 8 departments'],
   },
   {
-    id: 'global-wellness-network-optimization',
-    title: 'Dashboard Health Tracker',
+    id: '3',
+    title: 'Item Request Tracker',
     category: 'Data Reporting',
-    image: 'https://ext.same-assets.com/477590935/3053120345.jpeg',
+    image: '/Story Board.png',
     context: 'Automated report monitoring to detect broken visuals and data drift.',
     impact: ['Decreased downtime 45%', 'Increased reporting reliability'],
   },
   {
-    id: 'culinary-delights-rebrand',
-    title: 'Product Resiliency',
+    id: '4',
+    title: 'Production Support',
     category: 'Data Reporting',
-    image: 'https://ext.same-assets.com/477590935/4250373845.jpeg',
+    image: '/Production Support.png',
     context: 'Modeled product failure scenarios to improve system resiliency.',
     impact: ['Identified 3 major bottlenecks', 'Cut incident response time by 25%'],
   },
   {
-    id: 'ecosolutions-ecommerce-platform',
+    id: '5',
     title: 'Floaty AI',
     category: 'AI',
     image: '/__FloatyAI.png',
@@ -249,7 +249,7 @@ function PreviewModal({ item, onClose }: { item: PortfolioItem; onClose: () => v
 
       {/* Card */}
       <motion.div
-        className="relative bg-white rounded-lg shadow-2xl overflow-hidden w-[95%] max-w-5xl h-[80vh] z-[101] flex flex-col"
+        className="relative bg-white rounded-lg shadow-2xl overflow-hidden w-[100%] max-w-5xl h-[80vh] z-[101] flex flex-col"
         initial={{ y: 28, scale: 0.96, opacity: 0 }}
         animate={{ y: 0, scale: 1, opacity: 1 }}
         transition={{ type: 'spring', stiffness: 180, damping: 18 }}
