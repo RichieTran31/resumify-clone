@@ -22,7 +22,7 @@ const contactInfo = [
   },
   {
     icon: 'https://ext.same-assets.com/3716856803/3881503158.svg',
-    title: 'Available for Work',
+    title: 'Open to Opportunities',
     description: 'Status',
   },
 ];
@@ -84,7 +84,7 @@ export default function Contact() {
             <div className="aspect-[16/9] bg-gradient-to-br from-blue-200 to-green-200 flex items-center justify-center">
               {/* Embedded Map */}
               <Image
-                src="https://ext.same-assets.com/3716856803/2043349370.png"
+                src="/location.png"
                 alt="Map showing location"
                 width={800}
                 height={450}
@@ -98,8 +98,9 @@ export default function Contact() {
             <div className="text-center">
               <h3 className="text-2xl font-semibold text-resumify-dark mb-4">Let's Work Together</h3>
               <p className="text-resumify-gray mb-6 max-w-2xl mx-auto">
-                Ready to discuss what problems I can solve? I'm always excited to work on new projects and collaborate
-                with passionate individuals and teams. Let's create something amazing together!
+              Ready to discuss the problems I can solve? 
+              I love building with passionate teams 
+              and I’m open to info sessions and conversations with leaders to learn, share, and explore fit.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -110,7 +111,7 @@ export default function Contact() {
                   Send Email
                 </a>
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+4048207894"
                   className="px-8 py-3 border-2 border-resumify-pink text-resumify-pink rounded-full hover:bg-resumify-pink hover:text-white transition-colors font-medium"
                 >
                   Call Now

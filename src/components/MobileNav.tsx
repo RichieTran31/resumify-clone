@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
 const navItems = [
-  { href: '/', icon: 'https://ext.same-assets.com/627721302/260646423.svg', label: 'Home' },
+  { href: '/', icon: '/home.svg', label: 'Home' },
   { href: '/about-me', icon: 'https://ext.same-assets.com/627721302/4061061103.svg', label: 'About Me' },
   { href: '/resume', icon: 'https://ext.same-assets.com/627721302/2320907649.svg', label: 'Resume' },
   { href: '/portfolio', icon: 'https://ext.same-assets.com/627721302/1998606599.svg', label: 'Portfolio' },
@@ -73,9 +73,9 @@ export default function MobileNav() {
                   <Image
                     src={item.icon}
                     alt={item.label}
-                    width={20}
-                    height={20}
-                    className="w-5 h-5"
+                    width={30}
+                    height={30}
+                    className="w-[30px] h-[30px]"
                   />
                   <span className="font-medium">{item.label}</span>
                 </Link>
