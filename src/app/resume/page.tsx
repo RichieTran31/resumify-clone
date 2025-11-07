@@ -3,6 +3,7 @@
 import MainLayout from '@/components/MainLayout';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 const experience = [
   {
@@ -113,6 +114,17 @@ function ProgressBar({ skill }: { skill: { name: string; level: number } }) {
 }
 
 export default function Resume() {
+  const [showPdfModal, setShowPdfModal] = useState(false);
+
+  // Lock body scroll when modal is open
+  useEffect(() => {
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = showPdfModal ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [showPdfModal]);
+
   return (
     <MainLayout>
       <div className="max-w-6xl mx-auto space-y-16">
@@ -121,8 +133,33 @@ export default function Resume() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          className="flex items-center gap-4 mb-8"
         >
-          <h1 className="text-5xl font-bold text-resumify-dark mb-8">Resume</h1>
+          <h1 className="text-5xl font-bold text-resumify-dark">Resume</h1>
+          <button
+            onClick={() => setShowPdfModal(true)}
+            className="p-2 rounded-full hover:bg-resumify-pink/10 transition-colors group"
+            aria-label="View PDF Resume"
+            title="Click to view PDF resume"
+          >
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="text-resumify-pink group-hover:scale-110 transition-transform"
+            >
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <polyline points="10 9 9 9 8 9" />
+            </svg>
+          </button>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -278,6 +315,70 @@ export default function Resume() {
           </div>
         </div>
       </div>
+
+      {/* PDF Modal */}
+      {showPdfModal && (
+        <PdfModal onClose={() => setShowPdfModal(false)} />
+      )}
     </MainLayout>
+  );
+}
+
+/* ==============================
+   PDF Modal Component
+============================== */
+function PdfModal({ onClose }: { onClose: () => void }) {
+  // ESC key handler
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [onClose]);
+
+  return (
+    <motion.div
+      className="fixed inset-0 z-[100] flex items-center justify-center"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Resume PDF"
+    >
+      {/* Backdrop */}
+      <div className="absolute inset-0 bg-black/60" onClick={onClose} />
+
+      {/* Modal Card */}
+      <motion.div
+        className="relative bg-white rounded-lg shadow-2xl overflow-hidden w-[95%] max-w-5xl h-[90vh] z-[101] flex flex-col"
+        initial={{ y: 28, scale: 0.96, opacity: 0 }}
+        animate={{ y: 0, scale: 1, opacity: 1 }}
+        exit={{ y: 28, scale: 0.96, opacity: 0 }}
+        transition={{ type: 'spring', stiffness: 180, damping: 18 }}
+      >
+        {/* Header */}
+        <div className="flex items-center justify-between p-4 border-b bg-white">
+          <h3 className="text-lg font-semibold text-resumify-dark">Resume PDF</h3>
+          <button
+            onClick={onClose}
+            aria-label="Close"
+            className="text-2xl text-resumify-gray hover:text-resumify-dark transition-colors"
+          >
+            &times;
+          </button>
+        </div>
+
+        {/* PDF Viewer */}
+        <div className="flex-1 overflow-hidden bg-gray-100">
+          <iframe
+            src="/Richie Tran Resume.pdf"
+            className="w-full h-full border-0"
+            title="Resume PDF"
+          />
+        </div>
+      </motion.div>
+    </motion.div>
   );
 }

@@ -16,6 +16,7 @@ type PortfolioItem = {
   images?: string[];
   context?: string;
   impact?: string[] | string;
+  url?: string;
 };
 
 /* ==============================
@@ -25,42 +26,61 @@ const portfolioItems: PortfolioItem[] = [
   {
     id: '1',
     title: 'Christmas Sales Analysis',
-    category: 'Data Reporting',
+    category: 'Analytics',
     images: ['/__Holiday_Dashboard_1.png', '/__Holiday_Dashboard_2.png'],
-    context: 'Analyzed Q4 seasonal sales patterns and regional performance.',
-    impact: ['Improved forecast accuracy by 18%', 'Enabled better inventory allocation'],
+    context: 'Dashboard that analyzes data from an Amazon seller',
+    impact: [
+      'Identifies best performing categories and SKUs to prioritize',
+      'Answers high level questions on demand patterns, customer behavior, and inventory levels',
+      'Uses countries, shopping preferences, and purchase frequencies to create customer personas for future marketing strategies'
+    ],
   },
   {
     id: '2',
-    title: 'CTO OKR Report',
-    category: 'Data Reporting',
-    images: ['/AHA 2.png', '/AHA.png'],
-    context: 'Built interactive OKR tracking dashboards for the CTO organization.',
-    impact: ['Reduced manual updates by 60%', 'Aligned KPIs across 8 departments'],
+    title: 'Airline Industries',
+    category: 'Analytics',
+    images: ['/Airline Dashboardpng.png'],
+    context: 'Dashboard that analyzes BTS data emphasizing COVID-19 impact on airline industries - Fewer charts, stronger decisions.',
+    impact: [
+      'Aggregates historical data and trends to highlight a single point home',
+      'Showcases that one great chart beats a dozen mediocre ones',
+    ],
   },
   {
     id: '3',
     title: 'Item Request Tracker',
     category: 'Data Reporting',
     image: '/Story Board.png',
-    context: 'Automated report monitoring to detect broken visuals and data drift.',
-    impact: ['Decreased downtime 45%', 'Increased reporting reliability'],
+    context: 'Aggregates requests from customers based on agile methodology.',
+    impact: [
+      'Helps product and project managers organizes requests and allocate resources', 
+      'Helps leaders track progress and deliverables to ensure timely delivery'
+    ],
   },
   {
     id: '4',
     title: 'Production Support',
     category: 'Data Reporting',
     image: '/Production Support.png',
-    context: 'Modeled product failure scenarios to improve system resiliency.',
-    impact: ['Identified 3 major bottlenecks', 'Cut incident response time by 25%'],
+    context: 'Aggregates production support request from customers and internal teams',
+    impact: [
+      'Helps leaders prioritize outages and address them in a timely manner', 
+      'Encourages others to find sustainable solutions to common issues'
+    ],
   },
   {
     id: '5',
     title: 'Floaty AI',
     category: 'AI',
     image: '/__FloatyAI.png',
-    context: 'Developed an AI platform integrating multiple LLM APIs for productivity tools.',
-    impact: ['Enabled dynamic model switching', 'Improved team efficiency 30%'],
+    context: 'Developed an AI platform integrating multiple LLM APIs for productivity tools - Click navigation link at the top right to view',
+    impact: [
+      'Allows users to use multiple LLM APIs in one place', 
+      'Consistent user feedback and feature requests', 
+      'Potential revenue of 10k USD per month based on pay per use business model',
+      'Example : I used OpenAI to ask relationship questions, and immediately ask Claude to generate a poem inside a single chat.'
+    ],
+    url: 'https://floatyai.com',
   },
 ];
 
@@ -260,9 +280,38 @@ function PreviewModal({ item, onClose }: { item: PortfolioItem; onClose: () => v
             <h3 className="text-lg font-semibold text-resumify-dark">{item.title}</h3>
             <p className="text-sm text-resumify-gray">{item.category}</p>
           </div>
-          <button onClick={onClose} aria-label="Close" className="text-2xl text-resumify-gray hover:text-resumify-dark">
-            &times;
-          </button>
+          <div className="flex items-center gap-2">
+            {item.url && (
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full hover:bg-resumify-pink/10 transition-colors group"
+                aria-label={`Visit ${item.title}`}
+                title={`Visit ${item.url}`}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-resumify-pink group-hover:scale-110 transition-transform"
+                >
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+            )}
+            <button onClick={onClose} aria-label="Close" className="text-2xl text-resumify-gray hover:text-resumify-dark">
+              &times;
+            </button>
+          </div>
         </div>
 
         {/* Carousel */}
@@ -279,12 +328,12 @@ function PreviewModal({ item, onClose }: { item: PortfolioItem; onClose: () => v
             style={{ transform: `translateX(-${index * 100}%)` }}
           >
             {images.map((src, i) => (
-              <div key={i} className="relative w-full h-full shrink-0">
+              <div key={i} className="relative w-full h-full shrink-0 bg-gray-100 flex items-center justify-center">
                 <Image
                   src={src}
                   alt={`${item.title} – slide ${i + 1}`}
                   fill
-                  className="object-cover"
+                  className="object-contain"
                   sizes="100vw"
                   // Local images fine; remote ones use unoptimized unless domain is whitelisted in next.config
                   unoptimized={src.startsWith('http')}

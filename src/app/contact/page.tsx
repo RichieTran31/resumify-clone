@@ -98,8 +98,9 @@ export default function Contact() {
             <div className="text-center">
               <h3 className="text-2xl font-semibold text-resumify-dark mb-4">Let's Work Together</h3>
               <p className="text-resumify-gray mb-6 max-w-2xl mx-auto">
-                Ready to discuss what problems I can solve? I'm always excited to work on new projects and collaborate
-                with passionate individuals and teams. Let's create something amazing together!
+              Ready to discuss the problems I can solve? 
+              I love building with passionate teams 
+              and I’m open to info sessions and conversations with leaders to learn, share, and explore fit.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

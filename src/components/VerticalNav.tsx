@@ -35,9 +35,9 @@ export default function VerticalNav() {
                 <Image
                   src={item.icon}
                   alt={item.label}
-                  width={20}
-                  height={20}
-                  className="w-5 h-5"
+                  width={30}
+                  height={30}
+                  className="w-[30px] h-[30px]"
                 />
               </div>
 
