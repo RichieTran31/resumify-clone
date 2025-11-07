@@ -35,13 +35,16 @@ const portfolioItems: PortfolioItem[] = [
       'Uses countries, shopping preferences, and purchase frequencies to create customer personas for future marketing strategies'
     ],
   },
-  {
+  { 
     id: '2',
-    title: 'CTO OKR Report',
-    category: 'Data Reporting',
-    images: ['/AHA 2.png', '/AHA.png'],
-    context: '*** All Items Limited for Compliance ***, This Report helps the C-Suite and Board of Directors track the progression of the CTO OKRs and their alignment and progress towards the goals.',
-    impact: ['Reports, consisting of multiple pages and connect', 'Aligned KPIs across 8 departments'],
+    title: 'Airline Industries',
+    category: 'Analytics',
+    images: ['/Airline Dashboardpng.png'],
+    context: 'Dashboard that analyzes BTS data emphasizing COVID-19 impact on airline industries - Fewer charts, stronger decisions.',
+    impact: [
+      'Aggregates historical data and trends to highlight a single point home',
+      'Showcases that one great chart beats a dozen mediocre ones',
+    ],
   },
   {
     id: '3',
@@ -70,12 +73,11 @@ const portfolioItems: PortfolioItem[] = [
     title: 'Floaty AI',
     category: 'AI',
     image: '/__FloatyAI.png',
-    context: 'Developed an AI platform integrating multiple LLM APIs for productivity tools - Click navigation link at the top right to view',
+    context: '*** Click navigation icon link at the top right to view ***',
     impact: [
       'Allows users to use multiple LLM APIs in one place', 
       'Consistent user feedback and feature requests', 
       'Potential revenue of 10k USD per month based on pay per use business model',
-      'Example : I used OpenAI to ask relationship questions, and immediately ask Claude to generate a poem inside a single chat.'
     ],
     url: 'https://floatyai.com',
   },
@@ -84,9 +86,13 @@ const portfolioItems: PortfolioItem[] = [
     title: 'Home Depot Analytics',
     category: 'Analytics',
     image: '/Tableau.png',
-    context: 'Developed an AI platform integrating multiple LLM APIs for productivity tools.',
-    impact: ['Enabled dynamic model switching', 'Improved team efficiency 30%'],
-  },
+    context: 'Analyzed the relationship between store tasks and KPIs across the stores nationwide.',
+    impact: [
+      'Explained seasonality and and action items based on each cluster of stores',
+      'Identified overarching trends and potential data gaps.',
+      'Detected early signals so leaders could steady performance'
+    ],
+  }
 ];
 
 const categories = ['All', 'Data Reporting', 'Analytics', 'AI'] as const;
