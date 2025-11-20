@@ -6,22 +6,22 @@ import { motion } from 'framer-motion';
 
 const contactInfo = [
   {
-    icon: 'https://ext.same-assets.com/3716856803/3130387964.svg',
+    icon: '/location.svg',
     title: 'United States',
     description: 'Location',
   },
   {
-    icon: 'https://ext.same-assets.com/3716856803/15865303.svg',
+    icon: '/phone.svg',
     title: '404-820-7894',
     description: 'Phone',
   },
   {
-    icon: 'https://ext.same-assets.com/3716856803/3067542398.svg',
+    icon: '/email.svg',
     title: 'richietran11@email.com',
     description: 'Email',
   },
   {
-    icon: 'https://ext.same-assets.com/3716856803/3881503158.svg',
+    icon: '/status.svg',
     title: 'Open to Opportunities',
     description: 'Status',
   },
