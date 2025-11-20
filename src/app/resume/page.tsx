@@ -25,7 +25,7 @@ const education = [
     year: '2026',
     institution: 'Georgia Institute of Technology',
     degree: 'Master of Analytics',
-    description: 'Concentration in Data Science & Business Analytics',
+    description: 'Concentration in Data Science, Machine Learning & Business Analytics',
   },
   {
     year: '2024',
@@ -54,7 +54,7 @@ const Extracurriculars = [
 const technologySkills = [
   { name: 'BI Tools - PowerBI, Tableau', level: 95 },
   { name: 'SQL - SSMS, Fabric', level: 75 },
-  { name: 'Languages - Python (Seaborn, Scikit-learn, Pandas)', level: 85 },
+  { name: 'Languages - Python (Seaborn, Scikit-learn, Pandas, Pytorch), R', level: 85 },
   { name: 'Integration Platforms - Power Automate, SSIS', level: 75 },
 ];
 
