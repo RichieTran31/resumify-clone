@@ -10,7 +10,7 @@ export default function Sidebar() {
       <div className="mb-6">
         <div className="w-32 h-32 rounded-full border-4 border-white overflow-hidden">
           <Image
-            src="\_Richie Tran.jpg"
+            src="/_Richie Tran.jpg"
             alt="Richie Tran"
             width={128}
             height={128}
@@ -32,7 +32,7 @@ export default function Sidebar() {
       <div className="flex gap-4 mb-8">
         <Link href="https://www.linkedin.com/in/richietran-18/" className="hover:scale-110 transition-transform">
           <Image
-            src="https://ext.same-assets.com/627721302/3783633550.svg"
+            src="/linkedin.svg"
             alt="LinkedIn"
             width={24}
             height={24}
