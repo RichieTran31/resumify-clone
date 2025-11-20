@@ -40,10 +40,10 @@ const portfolioItems: PortfolioItem[] = [
     title: 'Airline Industries',
     category: 'Analytics',
     images: ['/Airline Dashboardpng.png'],
-    context: 'Dashboard that analyzes BTS data emphasizing COVID-19 impact on airline industries - Fewer charts, stronger decisions.',
+    context: 'Part of a strategic report that discusses COVID-19 impact on airline industries',
     impact: [
-      'Aggregates historical data and trends to highlight a single point home',
-      'Showcases that one great chart beats a dozen mediocre ones',
+      'Aggregated TSA checkpoint data to highlight worker shorters, restrictions, and other passenger information.',
+      'Used the data to explain what happened strategically and highlight where responses could have been improved.',
     ],
   },
   {
@@ -86,11 +86,11 @@ const portfolioItems: PortfolioItem[] = [
     title: 'Home Depot Analytics',
     category: 'Analytics',
     image: '/Tableau.png',
-    context: 'Analyzed the relationship between store tasks and KPIs across the stores nationwide.',
+    context: 'Analyzed the relationship between store tasks and KPIs across the stores nationwide - Current image is 1/3 pages of a story board',
     impact: [
       'Explained seasonality and and action items based on each cluster of stores',
       'Identified overarching trends and potential data gaps.',
-      'Detected early signals so leaders could steady performance'
+      'Used EDA (matplotlib, seaborn) to identify misrecordings, inconsistencies, outliers, and manual entry errors, which were then corrected with stakeholders.'
     ],
   }
 ];
