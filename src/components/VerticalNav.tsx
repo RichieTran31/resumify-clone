@@ -6,10 +6,10 @@ import { usePathname } from 'next/navigation';
 
 const navItems = [
   { href: '/', icon: '/home.svg', label: 'Home' },
-  { href: '/about-me', icon: 'https://ext.same-assets.com/627721302/4061061103.svg', label: 'About Me' },
-  { href: '/resume', icon: 'https://ext.same-assets.com/627721302/2320907649.svg', label: 'Resume' },
-  { href: '/portfolio', icon: 'https://ext.same-assets.com/627721302/1998606599.svg', label: 'Portfolio' },
-  { href: '/contact', icon: 'https://ext.same-assets.com/627721302/1367661487.svg', label: 'Contact' },
+  { href: '/about-me', icon: '/aboutme.svg', label: 'About Me' },
+  { href: '/resume', icon: '/resume.svg', label: 'Resume' },
+  { href: '/portfolio', icon: '/portfolio.svg', label: 'Portfolio' },
+  { href: '/contact', icon: '/contact.svg', label: 'Contact' },
 ];
 
 export default function VerticalNav() {
