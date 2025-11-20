@@ -26,8 +26,8 @@ export default function MainLayout({ children }: MainLayoutProps) {
       </div>
 
       {/* Main Content Area */}
-      <div className="lg:ml-80 min-h-screen pt-16 lg:pt-0">
-        <div className="container mx-auto px-4 lg:px-8 py-8 lg:py-16">
+      <div className="lg:ml-80 min-h-screen pt-20 lg:pt-0">
+        <div className="container mx-auto px-4 lg:px-8 lg:pr-32 py-8 lg:py-16">
           {children}
         </div>
       </div>
