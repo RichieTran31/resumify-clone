@@ -98,6 +98,7 @@ const portfolioItems: PortfolioItem[] = [
     id: '7',
     title: 'Hotel Cancellation Analysis',
     category: 'Analytics',
+    image: '/Hotel Cancellation.jpg',
     pdf: '/Hotel Cancellation.pdf',
     context: 'Machine Learning Business Analytics Project analyzing hotel booking cancellations',
     impact: [
@@ -190,7 +191,16 @@ export default function Portfolio() {
                 onClick={() => setSelectedItem(item)}
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
-                  {hasPdf(item) ? (
+                  {thumb ? (
+                    <Image
+                      src={thumb}
+                      alt={item.title}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-110"
+                      // Local images load fine; remote ones need unoptimized unless domain is configured
+                      unoptimized={thumb.startsWith('http')}
+                    />
+                  ) : hasPdf(item) ? (
                     <div className="w-full h-full bg-gradient-to-br from-resumify-pink/20 to-resumify-pink/40 flex items-center justify-center">
                       <div className="text-center p-6">
                         <svg
@@ -210,15 +220,6 @@ export default function Portfolio() {
                         <p className="text-resumify-dark font-medium">PDF Presentation</p>
                       </div>
                     </div>
-                  ) : thumb ? (
-                    <Image
-                      src={thumb}
-                      alt={item.title}
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-110"
-                      // Local images load fine; remote ones need unoptimized unless domain is configured
-                      unoptimized={thumb.startsWith('http')}
-                    />
                   ) : (
                     <div className="w-full h-full bg-gray-200" />
                   )}
@@ -364,12 +365,11 @@ function PreviewModal({ item, onClose }: { item: PortfolioItem; onClose: () => v
 
         {/* PDF Viewer or Carousel */}
         {isPdf && item.pdf ? (
-          <div className="relative w-full flex-1 min-h-0">
+          <div className="relative w-full h-[50vh] min-h-0 flex-shrink-0">
             <iframe
               src={item.pdf}
               className="w-full h-full border-0"
               title={`${item.title} PDF`}
-              style={{ minHeight: '60vh' }}
             />
           </div>
         ) : (
@@ -442,7 +442,7 @@ function PreviewModal({ item, onClose }: { item: PortfolioItem; onClose: () => v
 
         {/* Text */}
         {(item.context || item.impact) && (
-          <div className="p-6 space-y-4 text-sm bg-white overflow-y-auto">
+          <div className={`p-6 space-y-4 text-sm bg-white overflow-y-auto flex-shrink-0 border-t ${isPdf ? 'max-h-[25vh]' : ''}`}>
             {item.context && (
               <section>
                 <h4 className="font-semibold text-resumify-dark mb-1">Context</h4>
