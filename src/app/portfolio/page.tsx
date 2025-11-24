@@ -14,6 +14,7 @@ type PortfolioItem = {
   category: 'Data Reporting' | 'Analytics' | 'AI' | string;
   image?: string;
   images?: string[];
+  pdf?: string;
   context?: string;
   impact?: string[] | string;
   url?: string;
@@ -92,6 +93,19 @@ const portfolioItems: PortfolioItem[] = [
       'Identified overarching trends and potential data gaps.',
       'Used EDA (matplotlib, seaborn) to identify misrecordings, inconsistencies, outliers, and manual entry errors, which were then corrected with stakeholders.'
     ],
+  },
+  {
+    id: '7',
+    title: 'Hotel Cancellation Analysis',
+    category: 'Analytics',
+    pdf: '/Hotel Cancellation.pdf',
+    context: 'Machine Learning Business Analytics Project analyzing hotel booking cancellations',
+    impact: [
+      'Used ML models (RF, GBT, NN) to predict booking cancellations',
+      'Identified key cancellation drivers: Deposit_Type, Total_of_special_requests, Lead_time',
+      'Developed predictive models to flag high-risk bookings for early intervention',
+      'Provided actionable insights for dynamic pricing and revenue protection'
+    ],
   }
 ];
 
@@ -102,6 +116,8 @@ const categories = ['All', 'Data Reporting', 'Analytics', 'AI'] as const;
 ============================== */
 const firstImageOf = (item: PortfolioItem) =>
   (Array.isArray(item.images) && item.images[0]) || item.image || '';
+
+const hasPdf = (item: PortfolioItem) => !!item.pdf;
 
 /* ==============================
    Page
@@ -174,7 +190,27 @@ export default function Portfolio() {
                 onClick={() => setSelectedItem(item)}
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
-                  {thumb ? (
+                  {hasPdf(item) ? (
+                    <div className="w-full h-full bg-gradient-to-br from-resumify-pink/20 to-resumify-pink/40 flex items-center justify-center">
+                      <div className="text-center p-6">
+                        <svg
+                          className="w-16 h-16 mx-auto mb-4 text-resumify-pink"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"
+                          />
+                        </svg>
+                        <p className="text-resumify-dark font-medium">PDF Presentation</p>
+                      </div>
+                    </div>
+                  ) : thumb ? (
                     <Image
                       src={thumb}
                       alt={item.title}
@@ -217,9 +253,10 @@ export default function Portfolio() {
 }
 
 /* ==============================
-   Modal with Carousel (simple)
+   Modal with Carousel (simple) or PDF viewer
 ============================== */
 function PreviewModal({ item, onClose }: { item: PortfolioItem; onClose: () => void }) {
+  const isPdf = hasPdf(item);
   const images = (item.images && item.images.length > 0 ? item.images : item.image ? [item.image] : []) as string[];
   const slideCount = images.length;
   const [index, setIndex] = useState(0);
@@ -228,14 +265,14 @@ function PreviewModal({ item, onClose }: { item: PortfolioItem; onClose: () => v
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
-      if (slideCount > 1) {
+      if (!isPdf && slideCount > 1) {
         if (e.key === 'ArrowRight') setIndex((i) => (i + 1) % slideCount);
         if (e.key === 'ArrowLeft') setIndex((i) => (i - 1 + slideCount) % slideCount);
       }
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [onClose, slideCount]);
+  }, [onClose, slideCount, isPdf]);
 
   // Swipe (pointer) — minimal
   const startX = useRef<number | null>(null);
@@ -325,72 +362,83 @@ function PreviewModal({ item, onClose }: { item: PortfolioItem; onClose: () => v
           </div>
         </div>
 
-        {/* Carousel */}
-        <div
-          className="relative w-full h-[50vh] md:h-[50vh] select-none"
-          style={{ touchAction: slideCount > 1 ? 'none' : 'auto' }}
-          onPointerDown={slideCount > 1 ? begin : undefined}
-          onPointerMove={slideCount > 1 ? move : undefined}
-          onPointerUp={slideCount > 1 ? end : undefined}
-          onPointerCancel={slideCount > 1 ? end : undefined}
-        >
-          <div
-            className="h-full flex transition-transform duration-500 ease-out"
-            style={{ transform: `translateX(-${index * 100}%)` }}
-          >
-            {images.map((src, i) => (
-              <div key={i} className="relative w-full h-full shrink-0 bg-gray-100 flex items-center justify-center">
-                <Image
-                  src={src}
-                  alt={`${item.title} – slide ${i + 1}`}
-                  fill
-                  className="object-contain"
-                  sizes="100vw"
-                  // Local images fine; remote ones use unoptimized unless domain is whitelisted in next.config
-                  unoptimized={src.startsWith('http')}
-                  priority={i === 0}
-                />
-              </div>
-            ))}
+        {/* PDF Viewer or Carousel */}
+        {isPdf && item.pdf ? (
+          <div className="relative w-full flex-1 min-h-0">
+            <iframe
+              src={item.pdf}
+              className="w-full h-full border-0"
+              title={`${item.title} PDF`}
+              style={{ minHeight: '60vh' }}
+            />
           </div>
-
-          {slideCount > 1 && (
-            <>
-              <button
-                onClick={prev}
-                onPointerDown={(e) => e.stopPropagation()}
-                aria-label="Previous"
-                className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-black/40 text-white p-2 hover:bg-black/60 z-10"
-              >
-                ‹
-              </button>
-              <button
-                onClick={next}
-                onPointerDown={(e) => e.stopPropagation()}
-                aria-label="Next"
-                className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-black/40 text-white p-2 hover:bg-black/60 z-10"
-              >
-                ›
-              </button>
-              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-                {images.map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setIndex(i);
-                    }}
-                    onPointerDown={(e) => e.stopPropagation()}
-                    aria-label={`Go to slide ${i + 1}`}
-                    className={`h-2.5 w-2.5 rounded-full transition-opacity ${
-                      index === i ? 'bg-white opacity-100' : 'bg-white/60 opacity-60 hover:opacity-90'
-                    }`}
+        ) : (
+          <div
+            className="relative w-full h-[50vh] md:h-[50vh] select-none"
+            style={{ touchAction: slideCount > 1 ? 'none' : 'auto' }}
+            onPointerDown={slideCount > 1 ? begin : undefined}
+            onPointerMove={slideCount > 1 ? move : undefined}
+            onPointerUp={slideCount > 1 ? end : undefined}
+            onPointerCancel={slideCount > 1 ? end : undefined}
+          >
+            <div
+              className="h-full flex transition-transform duration-500 ease-out"
+              style={{ transform: `translateX(-${index * 100}%)` }}
+            >
+              {images.map((src, i) => (
+                <div key={i} className="relative w-full h-full shrink-0 bg-gray-100 flex items-center justify-center">
+                  <Image
+                    src={src}
+                    alt={`${item.title} – slide ${i + 1}`}
+                    fill
+                    className="object-contain"
+                    sizes="100vw"
+                    // Local images fine; remote ones use unoptimized unless domain is whitelisted in next.config
+                    unoptimized={src.startsWith('http')}
+                    priority={i === 0}
                   />
-                ))}
-              </div>
-            </>
-          )}
-        </div>
+                </div>
+              ))}
+            </div>
+
+            {slideCount > 1 && (
+              <>
+                <button
+                  onClick={prev}
+                  onPointerDown={(e) => e.stopPropagation()}
+                  aria-label="Previous"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-black/40 text-white p-2 hover:bg-black/60 z-10"
+                >
+                  ‹
+                </button>
+                <button
+                  onClick={next}
+                  onPointerDown={(e) => e.stopPropagation()}
+                  aria-label="Next"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-black/40 text-white p-2 hover:bg-black/60 z-10"
+                >
+                  ›
+                </button>
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                  {images.map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setIndex(i);
+                      }}
+                      onPointerDown={(e) => e.stopPropagation()}
+                      aria-label={`Go to slide ${i + 1}`}
+                      className={`h-2.5 w-2.5 rounded-full transition-opacity ${
+                        index === i ? 'bg-white opacity-100' : 'bg-white/60 opacity-60 hover:opacity-90'
+                      }`}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+        )}
 
         {/* Text */}
         {(item.context || item.impact) && (
