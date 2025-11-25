@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 
 const experience = [
   {
-    period: 'Current',
+    period: '2025 - Current',
     company: 'FIS',
     title: 'Data Analyst',
     description: 'Data Analyst in the CTO Strategic Planning Office delivering enterprise-level reporting and supporting data-backed decisions',
@@ -16,13 +16,13 @@ const experience = [
     period: '2022 - 2024',
     company: 'Various', 
     title: 'General Analyst - Individual Contributor',
-    description: '4 internships + part time roles in IT, Consulting, and Finance to learn more about different industries',
+    description: 'Completed 4 internships and part-time roles across Enterprise IT, Consulting, and Investment Banking, driving process optimization, financial reporting, and investment analysis while strengthening stakeholder management skills.',
   },
 ];
 
 const education = [
   {
-    year: '2026',
+    year: '2025',
     institution: 'Georgia Institute of Technology',
     degree: 'Master of Analytics',
     description: 'Concentration in Data Science, Machine Learning & Business Analytics',
@@ -54,16 +54,16 @@ const Extracurriculars = [
 const technologySkills = [
   { name: 'BI Tools - PowerBI, Tableau', level: 95 },
   { name: 'SQL - SSMS, Fabric', level: 75 },
-  { name: 'Languages - Python (Seaborn, Scikit-learn, Pandas, Pytorch), R', level: 85 },
+  { name: 'Languages - Python (Scikit-learn, Pandas, Pytorch), R', level: 85 },
   { name: 'Integration Platforms - Power Automate, SSIS', level: 75 },
 ];
 
 const businessSkills = [
   { name: 'Excel', level: 100 },
   { name: 'Project Management - Jira, Trello, Smartsheet', level: 85 },
-  { name: 'Statistics', level: 80 },
-  { name: 'Financial Modeling', level: 75 },
-  { name: 'Process Optimization', level: 85 },
+  { name: 'Stakeholder Management', level: 90 },
+  { name: 'Communication', level: 95 },
+  { name: 'Process Optimization', level: 90 },
 ];
 
 const softSkills = [
@@ -77,6 +77,14 @@ const softSkills = [
   'Adaptability',
   'Decision Making',
   'Mentorship & Coaching',
+];
+
+const domains = [
+  'Product Analytics',
+  'Product Management',
+  'Machine Learning',
+  'Data Analytics',
+  'Technology Strategy',
 ];
 
 const certifications = [
@@ -286,6 +294,28 @@ export default function Resume() {
                 ))}
               </div>
             </motion.div>
+
+            {/* Domains */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+            >
+              <h2 className="text-3xl font-bold text-resumify-dark mb-8">
+                <span className="text-resumify-pink">Domains</span>
+              </h2>
+              <div className="flex flex-wrap gap-3">
+                {domains.map((domain) => (
+                  <span
+                    key={domain}
+                    className="px-4 py-2 bg-resumify-pink text-white rounded-full text-sm font-medium"
+                  >
+                    {domain}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+
             {/* Accolades */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
