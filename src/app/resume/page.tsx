@@ -403,7 +403,9 @@ function PdfModal({ onClose }: { onClose: () => void }) {
         {/* PDF Viewer */}
         <div className="flex-1 overflow-hidden bg-gray-100">
           <iframe
-            src="/Richie Tran Resume.pdf"
+            // NOTE: The query string is intentional to bust aggressive mobile caching
+            // If you upload a new PDF with the same filename, bump the version (v=2, v=3, etc.)
+            src="/Richie Tran Resume.pdf?v=1"
             className="w-full h-full border-0"
             title="Resume PDF"
           />
