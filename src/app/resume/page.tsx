@@ -1,6 +1,7 @@
 'use client';
 
 import MainLayout from '@/components/MainLayout';
+import PageNav from '@/components/PageNav';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
@@ -141,9 +142,13 @@ export default function Resume() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex items-center gap-4 mb-8"
+          className="mb-8"
         >
-          <h1 className="text-5xl font-bold text-resumify-dark">Resume</h1>
+          <div className="flex items-center justify-between mb-4">
+            <h1 className="text-5xl font-bold text-resumify-dark">Resume</h1>
+            <PageNav />
+          </div>
+          <div className="flex items-center gap-4">
           <button
             onClick={() => setShowPdfModal(true)}
             className="p-2 rounded-full hover:bg-resumify-pink/10 transition-colors group"
@@ -168,6 +173,7 @@ export default function Resume() {
               <polyline points="10 9 9 9 8 9" />
             </svg>
           </button>
+          </div>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -403,9 +409,7 @@ function PdfModal({ onClose }: { onClose: () => void }) {
         {/* PDF Viewer */}
         <div className="flex-1 overflow-hidden bg-gray-100">
           <iframe
-            // NOTE: The query string is intentional to bust aggressive mobile caching
-            // If you upload a new PDF with the same filename, bump the version (v=2, v=3, etc.)
-            src="/Richie Tran Resume.pdf?v=1"
+            src="/Richie Tran Resume.pdf"
             className="w-full h-full border-0"
             title="Resume PDF"
           />

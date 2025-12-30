@@ -1,7 +1,6 @@
 'use client';
 
 import Sidebar from './Sidebar';
-import VerticalNav from './VerticalNav';
 import MobileNav from './MobileNav';
 import Link from 'next/link';
 
@@ -20,14 +19,9 @@ export default function MainLayout({ children }: MainLayoutProps) {
         <Sidebar />
       </div>
 
-      {/* Vertical Navigation - Hidden on mobile */}
-      <div className="hidden lg:block">
-        <VerticalNav />
-      </div>
-
       {/* Main Content Area */}
       <div className="lg:ml-80 min-h-screen pt-20 lg:pt-0">
-        <div className="container mx-auto px-4 lg:px-8 lg:pr-32 py-8 lg:py-16">
+        <div className="container mx-auto px-4 lg:px-8 lg:pr-8 py-8 lg:py-16">
           {children}
         </div>
       </div>

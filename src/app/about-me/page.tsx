@@ -1,6 +1,7 @@
 'use client';
 
 import MainLayout from '@/components/MainLayout';
+import PageNav from '@/components/PageNav';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -80,9 +81,12 @@ export default function AboutMe() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl font-bold text-resumify-dark mb-8">
-            About <span className="text-resumify-pink">Me</span>
-          </h1>
+          <div className="flex items-center justify-between mb-8">
+            <h1 className="text-5xl font-bold text-resumify-dark">
+              About <span className="text-resumify-pink">Me</span>
+            </h1>
+            <PageNav />
+          </div>
           <p className="text-lg text-resumify-gray leading-relaxed max-w-4xl">
           Richie Tran leads enterprise analytics initiatives, aligning data strategy with organizational goals. 
           He bridges technical expertise and project leadership to deliver timely, high-value insights that shape executive decisions.  

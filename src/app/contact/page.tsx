@@ -1,6 +1,7 @@
 'use client';
 
 import MainLayout from '@/components/MainLayout';
+import PageNav from '@/components/PageNav';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -37,7 +38,10 @@ export default function Contact() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl font-bold text-resumify-dark mb-8">Contact</h1>
+          <div className="flex items-center justify-between mb-8">
+            <h1 className="text-5xl font-bold text-resumify-dark">Contact</h1>
+            <PageNav />
+          </div>
         </motion.div>
 
         {/* Contact Cards */}
