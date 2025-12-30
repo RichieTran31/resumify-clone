@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { useEffect } from 'react';
 
 const navItems = [
   { href: '/about-me', icon: '/aboutme.svg', label: 'About Me' },
@@ -16,14 +15,11 @@ export default function PageNav() {
   const pathname = usePathname();
   const router = useRouter();
 
-  const currentIndex = navItems.findIndex((item) => item.href === pathname);
-
   const goToPrevious = () => {
     const index = navItems.findIndex((item) => item.href === pathname);
     if (index > 0) {
       router.push(navItems[index - 1].href);
     } else {
-      // Loop to last item
       router.push(navItems[navItems.length - 1].href);
     }
   };
@@ -33,44 +29,12 @@ export default function PageNav() {
     if (index < navItems.length - 1) {
       router.push(navItems[index + 1].href);
     } else {
-      // Loop to first item
       router.push(navItems[0].href);
     }
   };
 
-  // Keyboard navigation
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      // Only handle arrow keys if not typing in an input/textarea
-      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
-        return;
-      }
-
-      if (e.key === 'ArrowLeft') {
-        e.preventDefault();
-        const index = navItems.findIndex((item) => item.href === pathname);
-        if (index > 0) {
-          router.push(navItems[index - 1].href);
-        } else {
-          router.push(navItems[navItems.length - 1].href);
-        }
-      } else if (e.key === 'ArrowRight') {
-        e.preventDefault();
-        const index = navItems.findIndex((item) => item.href === pathname);
-        if (index < navItems.length - 1) {
-          router.push(navItems[index + 1].href);
-        } else {
-          router.push(navItems[0].href);
-        }
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [pathname, router]);
-
   return (
-    <div className="inline-flex items-center gap-2 ml-auto">
+    <div className="flex items-center gap-2">
       {/* Left Arrow */}
       <button
         onClick={goToPrevious}
@@ -146,4 +110,3 @@ export default function PageNav() {
     </div>
   );
 }
-

@@ -142,38 +142,10 @@ export default function Resume() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mb-8"
+          className="flex items-center justify-between flex-wrap gap-4 mb-8"
         >
-          <div className="flex items-center justify-between mb-4">
-            <h1 className="text-5xl font-bold text-resumify-dark">Resume</h1>
-            <PageNav />
-          </div>
-          <div className="flex items-center gap-4">
-          <button
-            onClick={() => setShowPdfModal(true)}
-            className="p-2 rounded-full hover:bg-resumify-pink/10 transition-colors group"
-            aria-label="View PDF Resume"
-            title="Click to view PDF resume"
-          >
-            <svg
-              width="28"
-              height="28"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="text-resumify-pink group-hover:scale-110 transition-transform"
-            >
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-              <polyline points="14 2 14 8 20 8" />
-              <line x1="16" y1="13" x2="8" y2="13" />
-              <line x1="16" y1="17" x2="8" y2="17" />
-              <polyline points="10 9 9 9 8 9" />
-            </svg>
-          </button>
-          </div>
+          <h1 className="text-5xl font-bold text-resumify-dark">Resume</h1>
+          <PageNav />
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -185,7 +157,33 @@ export default function Resume() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <h2 className="text-3xl font-bold text-resumify-dark mb-8">Experience</h2>
+              <div className="flex items-center gap-4 mb-8">
+                <h2 className="text-3xl font-bold text-resumify-dark">Experience</h2>
+                <button
+                  onClick={() => setShowPdfModal(true)}
+                  className="p-2 rounded-full hover:bg-resumify-pink/10 transition-colors group"
+                  aria-label="View PDF Resume"
+                  title="Click to view PDF resume"
+                >
+                  <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-resumify-pink group-hover:scale-110 transition-transform"
+                  >
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <line x1="16" y1="13" x2="8" y2="13" />
+                    <line x1="16" y1="17" x2="8" y2="17" />
+                    <polyline points="10 9 9 9 8 9" />
+                  </svg>
+                </button>
+              </div>
               <div className="space-y-8">
                 {experience.map((exp, index) => (
                   <div key={`exp-${exp.company}-${exp.period}`} className="relative pl-8 border-l-2 border-resumify-pink">

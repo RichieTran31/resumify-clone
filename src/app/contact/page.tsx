@@ -38,7 +38,7 @@ export default function Contact() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center justify-between flex-wrap gap-4 mb-8">
             <h1 className="text-5xl font-bold text-resumify-dark">Contact</h1>
             <PageNav />
           </div>

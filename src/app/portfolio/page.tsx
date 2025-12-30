@@ -147,7 +147,7 @@ export default function Portfolio() {
       <div className="max-w-6xl mx-auto space-y-12">
         {/* Header */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-          <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center justify-between flex-wrap gap-4 mb-8">
             <h1 className="text-5xl font-bold text-resumify-dark">Portfolio</h1>
             <PageNav />
           </div>

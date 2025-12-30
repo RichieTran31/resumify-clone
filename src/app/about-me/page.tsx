@@ -81,7 +81,7 @@ export default function AboutMe() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center justify-between flex-wrap gap-4 mb-8">
             <h1 className="text-5xl font-bold text-resumify-dark">
               About <span className="text-resumify-pink">Me</span>
             </h1>
@@ -91,31 +91,6 @@ export default function AboutMe() {
           Richie Tran leads enterprise analytics initiatives, aligning data strategy with organizational goals. 
           He bridges technical expertise and project leadership to deliver timely, high-value insights that shape executive decisions.  
          </p>
-        </motion.div>
-
-        {/* Contact Info */}
-        <motion.div
-          className="grid grid-cols-2 lg:grid-cols-4 gap-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <div>
-            <h3 className="text-resumify-pink font-semibold mb-2">Citizenship</h3>
-            <p className="text-resumify-gray">US</p>
-          </div>
-          <div>
-            <h3 className="text-resumify-pink font-semibold mb-2">Location</h3>
-            <p className="text-resumify-gray">Atlanta, USA</p>
-          </div>
-          <div>
-            <h3 className="text-resumify-pink font-semibold mb-2">Email</h3>
-            <p className="text-resumify-gray">richietran11@email.com</p>
-          </div>
-          <div>
-            <h3 className="text-resumify-pink font-semibold mb-2">Phone</h3>
-            <p className="text-resumify-gray">+1 404 820 7894</p>
-          </div>
         </motion.div>
 
         {/* My Work */}
