@@ -12,7 +12,7 @@ import { useState, useEffect, useRef } from 'react';
 type PortfolioItem = {
   id: string;
   title: string;
-  category: 'Data Reporting' | 'Analytics' | 'AI' | string;
+  category:  'Analytics' | 'Other' | 'Data Reporting' | string;
   image?: string;
   images?: string[];
   pdf?: string;
@@ -26,16 +26,43 @@ type PortfolioItem = {
 ============================== */
 const portfolioItems: PortfolioItem[] = [
   {
-    id: '1',
-    title: 'Christmas Sales Analysis',
+    id: '6',
+    title: 'Home Depot Analytics',
     category: 'Analytics',
-    images: ['/__Holiday_Dashboard_1.png', '/__Holiday_Dashboard_2.png'],
-    context: 'Dashboard that analyzes data from an Amazon seller',
+    images: ['/HomeDepot1.jpg', '/HomeDepot2.jpg'],
+    context: 'Analyzed the relationship between store tasks and KPIs across the stores nationwide - Current image is 1/3 pages of a story board',
     impact: [
-      'Identifies best performing categories and SKUs to prioritize',
-      'Answers high level questions on demand patterns, customer behavior, and inventory levels',
-      'Uses countries, shopping preferences, and purchase frequencies to create customer personas for future marketing strategies'
+      'Explained seasonality and and action items based on each cluster of stores',
+      'Identified overarching trends and potential data gaps.',
+      'Used EDA (matplotlib, seaborn) to identify misrecordings, inconsistencies, outliers, and manual entry errors, which were then corrected with stakeholders.'
     ],
+  },
+  {
+    id: '7',
+    title: 'Hotel Cancellation Analysis',
+    category: 'Analytics',
+    image: '/Hotel Cancellation.jpg',
+    pdf: '/Hotel Cancellation.pdf',
+    context: 'Machine Learning Business Analytics Project analyzing hotel booking cancellations',
+    impact: [
+      'Used ML models (RF, GBT, NN) to predict booking cancellations',
+      'Identified key cancellation drivers: Deposit_Type, Total_of_special_requests, Lead_time',
+      'Developed predictive models to flag high-risk bookings for early intervention',
+      'Provided actionable insights for dynamic pricing and revenue protection'
+    ],
+  },
+  {
+    id: '5',
+    title: 'Floaty AI',
+    category: 'Other',
+    image: '/__FloatyAI.png',
+    context: '*** Click navigation icon link at the top right to view ***',
+    impact: [
+      'Allows users to use multiple LLM APIs in one place', 
+      'Consistent user feedback and feature requests', 
+      'Potential revenue of 10k USD per month based on pay per use business model',
+    ],
+    url: 'https://floatyai.com',
   },
   { 
     id: '2',
@@ -46,6 +73,18 @@ const portfolioItems: PortfolioItem[] = [
     impact: [
       'Aggregated TSA checkpoint data to highlight worker shorters, restrictions, and other passenger information.',
       'Used the data to explain what happened strategically and highlight where responses could have been improved.',
+    ],
+  },
+  {
+    id: '1',
+    title: 'Christmas Sales Analysis',
+    category: 'Data Reporting',
+    images: ['/__Holiday_Dashboard_1.png', '/__Holiday_Dashboard_2.png'],
+    context: 'Dashboard that analyzes data from an Amazon seller',
+    impact: [
+      'Identifies best performing categories and SKUs to prioritize',
+      'Answers high level questions on demand patterns, customer behavior, and inventory levels',
+      'Uses countries, shopping preferences, and purchase frequencies to create customer personas for future marketing strategies'
     ],
   },
   {
@@ -70,48 +109,9 @@ const portfolioItems: PortfolioItem[] = [
       'Encourages others to find sustainable solutions to common issues'
     ],
   },
-  {
-    id: '5',
-    title: 'Floaty AI',
-    category: 'AI',
-    image: '/__FloatyAI.png',
-    context: '*** Click navigation icon link at the top right to view ***',
-    impact: [
-      'Allows users to use multiple LLM APIs in one place', 
-      'Consistent user feedback and feature requests', 
-      'Potential revenue of 10k USD per month based on pay per use business model',
-    ],
-    url: 'https://floatyai.com',
-  },
-  {
-    id: '6',
-    title: 'Home Depot Analytics',
-    category: 'Analytics',
-    image: '/Tableau.png',
-    context: 'Analyzed the relationship between store tasks and KPIs across the stores nationwide - Current image is 1/3 pages of a story board',
-    impact: [
-      'Explained seasonality and and action items based on each cluster of stores',
-      'Identified overarching trends and potential data gaps.',
-      'Used EDA (matplotlib, seaborn) to identify misrecordings, inconsistencies, outliers, and manual entry errors, which were then corrected with stakeholders.'
-    ],
-  },
-  {
-    id: '7',
-    title: 'Hotel Cancellation Analysis',
-    category: 'Analytics',
-    image: '/Hotel Cancellation.jpg',
-    pdf: '/Hotel Cancellation.pdf',
-    context: 'Machine Learning Business Analytics Project analyzing hotel booking cancellations',
-    impact: [
-      'Used ML models (RF, GBT, NN) to predict booking cancellations',
-      'Identified key cancellation drivers: Deposit_Type, Total_of_special_requests, Lead_time',
-      'Developed predictive models to flag high-risk bookings for early intervention',
-      'Provided actionable insights for dynamic pricing and revenue protection'
-    ],
-  }
 ];
 
-const categories = ['All', 'Data Reporting', 'Analytics', 'AI'] as const;
+const categories = ['All', 'Analytics', 'AI', 'Data Reporting'] as const;
 
 /* ==============================
    Helpers

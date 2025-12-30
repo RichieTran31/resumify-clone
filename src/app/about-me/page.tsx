@@ -7,20 +7,20 @@ import { motion } from 'framer-motion';
 
 const services = [
   {
-    title: 'Communication & Roadmapping',
-    description: 'Clear communicator skilled at gathering requirements and aligning the right teams → Consistently delivering projects that exceed stakeholder expectations.',
+    title: 'Communication & Stakeholder Alignment',
+    description: 'Clear communicator who translates business needs into aligned execution across teams, consistently delivering high-impact outcomes.',
   },
   {
-    title: 'AI & Emerging Technology Integration',
+    title: 'AI & Emerging Technology',
     description: 'Experience in agents and dozens of LLMs -> Scalable AI solutions that boost productivity and provides higher quality solutions.',
   },
   {
-    title: 'Technical Fluency',
-    description: 'Hands on experience in SQL, ETL, and BI tools -> Excellent data pipelines design and query logic for reliable reporting and business-ready insights.',
+    title: 'Analytics Emgineering',
+    description: 'Strong foundation in SQL, ETL, and BI tools, building reliable data pipelines and business-ready reporting.',
   },
   {
-    title: 'Leadership & Knowledge Sharing',
-    description: 'Innate desire and joy in teaching others -> Mentored 15+ coworkers, managers, and students in SQL & BI Tools (Tableau and PowerBI).',
+    title: 'Leadership & Mentorship',
+    description: 'Strong people developer with a track record of mentoring cross-functional teams in analytics tools and best practices.',
   },
 ];
 
