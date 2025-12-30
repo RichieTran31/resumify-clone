@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 const services = [
   {
     title: 'Communication & Stakeholder Alignment',
-    description: 'Clear communicator who translates business needs into aligned execution across teams, consistently delivering high-impact outcomes.',
+    description: 'Clear communicator who translates business needs into aligned execution, and high-impact outcomes.',
   },
   {
     title: 'AI & Emerging Technology',
@@ -66,7 +66,7 @@ const brands = [
 ];
 
 const stats = [
-  { label: 'Developed Reports', value: '+20' },
+  { label: 'US Cities Visited', value: '+10' },
   { label: 'Teaching Volunteer Hours', value: '+200' },
   { label: 'First Cousins', value: '+30' }
 ];

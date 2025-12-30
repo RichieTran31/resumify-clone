@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 
 const navItems = [
-  { href: '/about-me', icon: '/aboutme.svg', label: 'About Me' },
+  { href: '/', icon: '/aboutme.svg', label: 'About Me' },
   { href: '/resume', icon: '/resume.svg', label: 'Resume' },
   { href: '/portfolio', icon: '/portfolio.svg', label: 'Portfolio' },
   { href: '/contact', icon: '/contact.svg', label: 'Contact' },
