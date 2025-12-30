@@ -7,22 +7,23 @@ import { motion } from 'framer-motion';
 
 const services = [
   {
-    title: 'Communication & Stakeholder Alignment',
-    description: 'Clear communicator who translates business needs into aligned execution, and high-impact outcomes.',
+    title: 'Stakeholder Communication & Delivery',
+    description: 'Support executive and VP-level stakeholders by translating business needs into actionable analytics.',
   },
   {
-    title: 'AI & Emerging Technology',
-    description: 'Experience in agents and dozens of LLMs -> Scalable AI solutions that boost productivity and provides higher quality solutions.',
+    title: 'Metrics & KPI Design',
+    description: 'Design and maintain portfolio, cost, risk, and performance KPIs used across multiple teams.',
   },
   {
-    title: 'Analytics Emgineering',
-    description: 'Strong foundation in SQL, ETL, and BI tools, building reliable data pipelines and business-ready reporting.',
+    title: 'Analytics Engineering & Reporting',
+    description: 'Develop SQL-based data models, ETL pipelines, and BI dashboards supporting enterprise reporting.',
   },
   {
-    title: 'Leadership & Mentorship',
-    description: 'Strong people developer with a track record of mentoring cross-functional teams in analytics tools and best practices.',
+    title: 'Leadership & Enablement',
+    description: 'Mentored 15+ analysts, managers, and partners in SQL and BI best practices.',
   },
 ];
+
 
 
 const testimonials = [

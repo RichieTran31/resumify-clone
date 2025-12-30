@@ -5,25 +5,25 @@ import PageNav from '@/components/PageNav';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
+
 const services = [
   {
-    title: 'Communication & Roadmapping',
-    description: 'Clear communicator skilled at gathering requirements and aligning the right teams → Consistently delivering projects that exceed stakeholder expectations.',
+    title: 'Stakeholder Communication & Delivery',
+    description: 'Support executive and VP-level stakeholders by translating business needs into actionable analytics.',
   },
   {
-    title: 'AI & Emerging Technology Integration',
-    description: 'Experience in agents and dozens of LLMs -> Scalable AI solutions that boost productivity and provides higher quality solutions.',
+    title: 'Metrics & KPI Design',
+    description: 'Design and maintain portfolio, cost, risk, and performance KPIs used across multiple teams.',
   },
   {
-    title: 'Technical Fluency',
-    description: 'Hands on experience in SQL, ETL, and BI tools -> Excellent data pipelines design and query logic for reliable reporting and business-ready insights.',
+    title: 'Analytics Engineering & Reporting',
+    description: 'Develop SQL-based data models, ETL pipelines, and BI dashboards supporting enterprise reporting.',
   },
   {
-    title: 'Leadership & Knowledge Sharing',
-    description: 'Innate desire and joy in teaching others -> Mentored 15+ coworkers, managers, and students in SQL & BI Tools (Tableau and PowerBI).',
+    title: 'Leadership & Enablement',
+    description: 'Mentored 15+ analysts, managers, and partners in SQL and BI best practices.',
   },
 ];
-
 
 const testimonials = [
   {

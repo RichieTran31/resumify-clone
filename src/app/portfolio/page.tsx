@@ -54,7 +54,7 @@ const portfolioItems: PortfolioItem[] = [
   {
     id: '5',
     title: 'Floaty AI',
-    category: 'Other',
+    category: 'AI',
     image: '/__FloatyAI.png',
     context: '*** Click navigation icon link at the top right to view ***',
     impact: [

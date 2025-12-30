@@ -23,13 +23,13 @@ const experience = [
 
 const education = [
   {
-    year: '2025',
+    year: 'Expected Graduation - May 2027',
     institution: 'Georgia Institute of Technology',
     degree: 'Master of Analytics',
     description: 'Concentration in Data Science, Machine Learning & Business Analytics',
   },
   {
-    year: '2024',
+    year: '',
     institution: 'Georgia Institute of Technology',
     degree: 'Bachelor of Science in Business Administration',
     description: 'Concentration in IT Management & Business Analytics, graduating with highest honors',
