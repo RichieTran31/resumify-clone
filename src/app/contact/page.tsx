@@ -13,12 +13,12 @@ const contactInfo = [
   },
   {
     icon: '/phone.svg',
-    title: '404-820-7894',
+    title: '(667) 334-4362',
     description: 'Phone',
   },
   {
     icon: '/email.svg',
-    title: 'richietran11@email.com',
+    title: 'kalabi077@email.com',
     description: 'Email',
   },
   {

@@ -26,19 +26,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
         </div>
       </div>
 
-      {/* Framer Attribution */}
-      <div className="fixed bottom-4 right-4 z-10">
-        <Link
-          href="https://framer.com/"
-          className="flex items-center gap-2 text-sm text-resumify-gray hover:text-resumify-dark transition-colors"
-          title="Custom website builder for designers, agencies and startups."
-        >
-          <span>Made in Framer</span>
-          <svg width="12" height="12" viewBox="0 0 12 12" className="fill-current">
-            <path d="M0 0h12v12H0z"/>
-          </svg>
-        </Link>
-      </div>
+      
     </div>
   );
 }

@@ -5,58 +5,54 @@ import PageNav from '@/components/PageNav';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import { desc } from 'framer-motion/client';
 
 const experience = [
   {
     period: '2025 - Current',
-    company: 'FIS',
-    title: 'Data Analyst',
-    description: 'Data Analyst in the CTO Strategic Planning Office delivering enterprise-level reporting and supporting data-backed decisions',
+    company: "Floaty AI",
+    title: "Backend Developer",
+    description: "Developed and maintained backend systems for AI-powered applications, including API development, database management, and integration with machine learning models.",
   },
   {
-    period: '2022 - 2024',
-    company: 'Various', 
-    title: 'General Analyst - Individual Contributor',
-    description: 'Completed 4 internships and part-time roles across Enterprise IT, Consulting, and Investment Banking, driving process optimization, financial reporting, and investment analysis while strengthening stakeholder management skills.',
-  },
+    period: '2024 - 2024',
+    company: "United States Patent and Trademark Office (USPTO)",
+    title: "Patent Examiner",
+    description: "Conducted comprehensive patent examinations, analyzing technical documents and prior art to determine patentability, while ensuring compliance with USPTO guidelines and maintaining clear communication with applicants.",
+  }
 ];
 
 const education = [
   {
-    year: 'Expected Graduation - May 2027',
-    institution: 'Georgia Institute of Technology',
-    degree: 'Master of Analytics',
-    description: 'Concentration in Data Science, Machine Learning & Business Analytics',
-  },
-  {
     year: '',
-    institution: 'Georgia Institute of Technology',
-    degree: 'Bachelor of Science in Business Administration',
-    description: 'Concentration in IT Management & Business Analytics, graduating with highest honors',
+    institution: 'University of Maryland, Baltimore County',
+    degree: 'Bachelor of Science in Computer Science',
+    description: 'Concentration in Data Sience, graduating with highest honors',
   },
 ];
 
 
-const Extracurriculars = [
-  {
-    year: '2010 - Current',
-    institution: 'TNTT Lê Bảo Tịnh - ATL ', // change to organization
-    degree: 'Youth Leader', // change to position
-    description: 'Church education and serving the Vietnamese Catholic community in the north and south metro Atlanta region',
-  },
-  {
-    year: '2018 - 2020',
-    institution: 'Various', // change to organization
-    degree: 'Volunteer Educator', // change to position
-    description: 'Various volunteering opportunities focused on educating underserved communities with organizations including The Young People\'s Project, Georgia State Academy for Future Teachers, and Walking in Authority Council.',
-  },
-];
+// const Extracurriculars = [
+//   {
+//     year: '2010 - Current',
+//     institution: 'TNTT Lê Bảo Tịnh - ATL ', // change to organization
+//     degree: 'Youth Leader', // change to position
+//     description: 'Church education and serving the Vietnamese Catholic community in the north and south metro Atlanta region',
+//   },
+//   {
+//     year: '2018 - 2020',
+//     institution: 'Various', // change to organization
+//     degree: 'Volunteer Educator', // change to position
+//     description: 'Various volunteering opportunities focused on educating underserved communities with organizations including The Young People\'s Project, Georgia State Academy for Future Teachers, and Walking in Authority Council.',
+//   },
+// ];
 
 const technologySkills = [
-  { name: 'BI Tools - PowerBI, Tableau', level: 95 },
-  { name: 'SQL - SSMS, Fabric', level: 75 },
-  { name: 'Languages - Python (Scikit-learn, Pandas, Pytorch), R', level: 85 },
+  { name: 'BI Tools - PowerBI, Tableau', level: 85 },
+  { name: 'SQL - SSMS, Fabric', level: 80 },
+  { name: 'Programming - Python, Java, TypeScript, C++', level: 95 },
   { name: 'Integration Platforms - Power Automate, SSIS', level: 75 },
+  { name: 'Data Science - (Scikit-learn, Pandas, Pytorch), R', level: 90 }
 ];
 
 const businessSkills = [
@@ -81,6 +77,7 @@ const softSkills = [
 ];
 
 const domains = [
+  'Software Development',
   'Product Analytics',
   'Product Management',
   'Machine Learning',
@@ -88,20 +85,20 @@ const domains = [
   'Technology Strategy',
 ];
 
-const certifications = [
-  {
-    title: 'Zell Miller Scholarship',
-    subtitle: 'Full Tuition Scholarship to the #1 School in the State of Georgia',
-    date: 'December 2024',
-    image: '/Zell Miller.png',
-  },
-  {
-    title: 'Valedictorian',
-    subtitle: 'GPA Rank 1 out of 300+ Seniors (4.5)',
-    date: 'May 2021',
-    image: '/Valedictorian.jpg',
-  },
-];
+// const certifications = [
+//   {
+//     title: 'Zell Miller Scholarship',
+//     subtitle: 'Full Tuition Scholarship to the #1 School in the State of Georgia',
+//     date: 'December 2024',
+//     image: '/Zell Miller.png',
+//   },
+//   {
+//     title: 'Valedictorian',
+//     subtitle: 'GPA Rank 1 out of 300+ Seniors (4.5)',
+//     date: 'May 2021',
+//     image: '/Valedictorian.jpg',
+//   },
+// ];
 
 function ProgressBar({ skill }: { skill: { name: string; level: number } }) {
   return (
@@ -222,7 +219,7 @@ export default function Resume() {
             </motion.div>
             
             {/* Extracurriculars */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -241,7 +238,7 @@ export default function Resume() {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
 
           {/* Right Column */}
@@ -321,7 +318,7 @@ export default function Resume() {
             </motion.div>
 
             {/* Accolades */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
@@ -345,7 +342,7 @@ export default function Resume() {
                 </div>
                 ))}
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </div>
@@ -407,7 +404,7 @@ function PdfModal({ onClose }: { onClose: () => void }) {
         {/* PDF Viewer */}
         <div className="flex-1 overflow-hidden bg-gray-100">
           <iframe
-            src="/Richie Tran Resume.pdf"
+            src="/Kabeer Alabi Resume.pdf"
             className="w-full h-full border-0"
             title="Resume PDF"
           />

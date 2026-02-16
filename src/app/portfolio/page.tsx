@@ -26,32 +26,6 @@ type PortfolioItem = {
 ============================== */
 const portfolioItems: PortfolioItem[] = [
   {
-    id: '6',
-    title: 'Home Depot Analytics',
-    category: 'Analytics',
-    images: ['/HomeDepot1.jpg', '/HomeDepot2.jpg'],
-    context: 'Analyzed the relationship between store tasks and KPIs across the stores nationwide - Current image is 1/3 pages of a story board',
-    impact: [
-      'Explained seasonality and and action items based on each cluster of stores',
-      'Identified overarching trends and potential data gaps.',
-      'Used EDA (matplotlib, seaborn) to identify misrecordings, inconsistencies, outliers, and manual entry errors, which were then corrected with stakeholders.'
-    ],
-  },
-  {
-    id: '7',
-    title: 'Hotel Cancellation Analysis',
-    category: 'Analytics',
-    image: '/Hotel Cancellation.jpg',
-    pdf: '/Hotel Cancellation.pdf',
-    context: 'Machine Learning Business Analytics Project analyzing hotel booking cancellations',
-    impact: [
-      'Used ML models (RF, GBT, NN) to predict booking cancellations',
-      'Identified key cancellation drivers: Deposit_Type, Total_of_special_requests, Lead_time',
-      'Developed predictive models to flag high-risk bookings for early intervention',
-      'Provided actionable insights for dynamic pricing and revenue protection'
-    ],
-  },
-  {
     id: '5',
     title: 'Floaty AI',
     category: 'AI',

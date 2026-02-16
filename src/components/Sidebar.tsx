@@ -10,8 +10,8 @@ export default function Sidebar() {
       <div className="mb-6">
         <div className="w-32 h-32 rounded-full border-4 border-white overflow-hidden">
           <Image
-            src="/_Richie Tran.jpg"
-            alt="Richie Tran"
+            src="/_Kabeer Alabi.png"
+            alt="Kabeer Alabi"
             width={128}
             height={128}
             className="w-full h-full object-cover"
@@ -21,16 +21,16 @@ export default function Sidebar() {
 
       {/* Name and Title */}
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-semibold mb-2">Richie Tran</h1>
+        <h1 className="text-3xl font-semibold mb-2">Kabeer Alabi</h1>
         <p className="text-lg text-white/90">
-          Analytics & Tech<br />
+          Software & Data<br />
           First Generation Graduate
         </p>
       </div>
 
       {/* Social Links */}
       <div className="flex gap-4 mb-8">
-        <Link href="https://www.linkedin.com/in/richietran-18/" className="hover:scale-110 transition-transform">
+        <Link href="https://www.linkedin.com/in/kabeer-alabi/" className="hover:scale-110 transition-transform">
           <Image
             src="/linkedin.svg"
             alt="LinkedIn"
@@ -43,7 +43,7 @@ export default function Sidebar() {
 
       {/* Copyright */}
       <div className="absolute bottom-8 text-sm text-white/80">
-        © 2025 All rights reserved.
+        © 2026 All rights reserved.
       </div>
     </div>
   );
