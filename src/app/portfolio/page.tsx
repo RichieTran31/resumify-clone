@@ -38,17 +38,6 @@ const portfolioItems: PortfolioItem[] = [
     ],
     url: 'https://floatyai.com',
   },
-  { 
-    id: '2',
-    title: 'Airline Industries',
-    category: 'Analytics',
-    images: ['/Airline Dashboardpng.png'],
-    context: 'Part of a strategic report that discusses COVID-19 impact on airline industries',
-    impact: [
-      'Aggregated TSA checkpoint data to highlight worker shorters, restrictions, and other passenger information.',
-      'Used the data to explain what happened strategically and highlight where responses could have been improved.',
-    ],
-  },
   {
     id: '1',
     title: 'Christmas Sales Analysis',
@@ -59,28 +48,6 @@ const portfolioItems: PortfolioItem[] = [
       'Identifies best performing categories and SKUs to prioritize',
       'Answers high level questions on demand patterns, customer behavior, and inventory levels',
       'Uses countries, shopping preferences, and purchase frequencies to create customer personas for future marketing strategies'
-    ],
-  },
-  {
-    id: '3',
-    title: 'Item Request Tracker',
-    category: 'Data Reporting',
-    image: '/Story Board.png',
-    context: 'Aggregates requests from customers based on agile methodology.',
-    impact: [
-      'Helps product and project managers organizes requests and allocate resources', 
-      'Helps leaders track progress and deliverables to ensure timely delivery'
-    ],
-  },
-  {
-    id: '4',
-    title: 'Production Support',
-    category: 'Data Reporting',
-    image: '/Production Support.png',
-    context: 'Aggregates production support request from customers and internal teams',
-    impact: [
-      'Helps leaders prioritize outages and address them in a timely manner', 
-      'Encourages others to find sustainable solutions to common issues'
     ],
   },
 ];

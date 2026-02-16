@@ -8,35 +8,35 @@ import { motion } from 'framer-motion';
 
 const services = [
   {
-    title: 'Stakeholder Communication & Delivery',
-    description: 'Support executive and VP-level stakeholders by translating business needs into actionable analytics.',
+    title: 'Cross-Functional Collaboration',
+    description: 'Partner with product, engineering, and operations teams to gather requirements, clarify objectives, and support delivery of data-driven solutions.',
   },
   {
-    title: 'Metrics & KPI Design',
-    description: 'Design and maintain portfolio, cost, risk, and performance KPIs used across multiple teams.',
+    title: 'Operational Analytics & Insight Generation',
+    description: 'Analyze performance metrics and reporting dashboards to identify trends, gaps, and opportunities for process improvement.',
   },
   {
-    title: 'Analytics Engineering & Reporting',
-    description: 'Develop SQL-based data models, ETL pipelines, and BI dashboards supporting enterprise reporting.',
+    title: 'Reporting & Process Documentation',
+    description: 'Develop structured documentation, workflow diagrams, and status updates to support feature rollouts, Agile planning, and operational alignment.',
   },
   {
-    title: 'Leadership & Enablement',
-    description: 'Mentored 15+ analysts, managers, and partners in SQL and BI best practices.',
+    title: 'Continuous Learning & Professional Growth',
+    description: 'Adapt quickly to new tools and environments, actively seeking feedback and opportunities to strengthen communication, analytical, and leadership skills.',
   },
 ];
 
 const testimonials = [
   {
     name: 'Richie Tran',
-    company: '',
+    company: 'FIS - Data Analyst',
     image: '\_Richie Tran.jpg',
     rating: 5,
     text: 'Top G',
   },
   {
-    name: 'Mohktar',
-    company: '',
-    image: '\_Mohktar.jpg',
+    name: 'Hossam Farid',
+    company: 'Floaty AI - CEO',
+    image: '\Hossam.jpg',
     rating: 5,
     text: 'Goated',
   }
